@@ -43,7 +43,7 @@ function custom_post_example() {
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
 			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'custom_type', 'with_front' => false ), /* you can specify it's url slug */
+			'rewrite'	=> array( 'slug' => 'custom_type', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'custom_type', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
@@ -70,7 +70,7 @@ function custom_post_example() {
 	// now let's add custom categories (these act like categories)
     register_taxonomy( 'custom_cat', 
     	array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-    	array('hierarchical' => true,     /* if this is true it acts like categories */             
+    	array('hierarchical' => true,     /* if this is true, it acts like categories */             
     		'labels' => array(
     			'name' => __( 'Custom Categories', 'bonestheme' ), /* name of the custom taxonomy */
     			'singular_name' => __( 'Custom Category', 'bonestheme' ), /* single taxonomy name */
