@@ -93,7 +93,7 @@ add_action('wp_dashboard_setup', 'bones_custom_dashboard_widgets');
 
 // calling your own login css so you can style it
 function bones_login_css() {
-	/* i couldn't get wp_enqueue_style to work :( */
+	/* I couldn't get wp_enqueue_style to work :( */
 	echo '<link rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/library/css/login.css">';
 }
 
@@ -112,8 +112,8 @@ add_filter('login_headertitle', 'bones_login_title');
 /************* CUSTOMIZE ADMIN *******************/
 
 /*
-I don't really reccomend editing the admin too much
-as things may get funky if Wordpress updates. Here
+I don't really recommend editing the admin too much
+as things may get funky if WordPress updates. Here
 are a few funtions which you can choose to use if
 you like.
 */

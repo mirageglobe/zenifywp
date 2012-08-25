@@ -106,7 +106,7 @@ function bones_gallery_style($css) {
 
 
 /*********************
-SCRIPTS & ENQEUEING
+SCRIPTS & ENQUEUEING
 *********************/
 
 // loading modernizr and jquery, and reply script 
@@ -127,7 +127,7 @@ function bones_scripts_and_styles() {
       wp_enqueue_script( 'comment-reply' );
     }
     
-    //adding scripts file in the footer
+    // adding scripts file in the footer
     wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
     
     // enqueue styles and scripts
@@ -135,7 +135,7 @@ function bones_scripts_and_styles() {
     wp_enqueue_style( 'bones-stylesheet' ); 
     wp_enqueue_style('bones-ie-only');
     /*
-    I reccomend using a plugin to call jQuery
+    I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached
     and your site will load faster.
     */
@@ -220,7 +220,7 @@ function bones_main_nav() {
     wp_nav_menu(array( 
     	'container' => false,                           // remove nav container
     	'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
-    	'menu' => 'The Main Menu',                           // nav name
+    	'menu' => 'The Main Menu',                      // nav name
     	'menu_class' => 'nav top-nav clearfix',         // adding custom nav class
     	'theme_location' => 'main-nav',                 // where it's located in the theme
     	'before' => '',                                 // before the menu

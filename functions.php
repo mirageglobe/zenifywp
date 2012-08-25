@@ -13,7 +13,7 @@ sidebars, comments, ect.
 /*
 1. library/bones.php
     - head cleanup (remove rsd, uri links, junk css, ect)
-	- enqeueing scripts & styles
+	- enqueueing scripts & styles
 	- theme support functions
     - custom menu output & fallbacks
 	- related post function
@@ -139,7 +139,7 @@ function bones_comments($comment, $args, $depth) {
 			</section>
 			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 		</article>
-    <!-- </li> is added by wordpress automatically -->
+    <!-- </li> is added by WordPress automatically -->
 <?php
 } // don't remove this bracket!
 
