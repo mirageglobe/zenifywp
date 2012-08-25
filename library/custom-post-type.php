@@ -52,9 +52,9 @@ function custom_post_example() {
 	 	) /* end of options */
 	); /* end of register post type */
 	
-	/* this ads your post categories to your custom post type */
+	/* this adds your post categories to your custom post type */
 	register_taxonomy_for_object_type('category', 'custom_type');
-	/* this ads your post tags to your custom post type */
+	/* this adds your post tags to your custom post type */
 	register_taxonomy_for_object_type('post_tag', 'custom_type');
 	
 } 
