@@ -85,6 +85,7 @@ function custom_post_example() {
     		),
     		'show_ui' => true,
     		'query_var' => true,
+    		'rewrite' => array( 'slug' => 'custom-slug' ),
     	)
     );   
     
