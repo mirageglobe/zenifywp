@@ -18,7 +18,7 @@
 					    
 					    <?php } elseif (is_author()) { ?>
 						    <h1 class="archive-title h2">
-						    	<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php get_the_author_meta('display_name'); ?>
+						    	<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php echo get_the_author_meta('display_name'); ?>
 						    </h1>
 					    
 					    <?php } elseif (is_day()) { ?>
