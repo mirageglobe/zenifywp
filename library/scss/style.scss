@@ -18,6 +18,9 @@ of the styles inside media queries.
 // import normalize
 @import "normalize";
 
+// import grids
+@import "grid";
+
 // import mixins
 @import "mixins";
 
@@ -103,5 +106,5 @@ sense to print at the bottom. Things like nav, ads, and forms should
 be set to display none.
 */
 @media print {
-
+	@import "print";
 }
