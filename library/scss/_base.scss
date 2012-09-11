@@ -32,65 +32,56 @@ style a page via class
 .blog {}                          /* blog template page */
 .archive {}                       /* archive page */
 .date {}                          /* date archive page */
-	.date-paged-1 {}              /* replace the number to the corresponding page number */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
 .search {}                        /* search page */
-	.search-results {}            /* search result page */
-	.search-no-results {}         /* no results search page */
-	.search-paged-1 {}            /* individual paged search (i.e. body.search-paged-3) */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
 .error404 {}                      /* 404 page */
 .single {}                        /* single post page */
-	.postid-1 {}                  /* individual post page by id (i.e. body.postid-73) */
-	.single-paged-1 {}            /* individual paged single (i.e. body.single-paged-3) */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
 .attachment {}                    /* attatchment page */
-	.attachmentid-1 {}            /* individual attatchment page (i.e. body.attachmentid-763) */
-	.attachment-mime-type {}      /* style mime type pages */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
 .author {}                        /* author page */
-	.author-nicename {}           /* user nicename (i.e. body.author-samueladams) */
-	.author-paged-1 {}            /* paged author archives (i.e. body.author-paged-4) for page 4 */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
 .category {}                      /* category page */
-	.category-1 {}                /* individual category page (i.e. body.category-6) */
-	.category-paged-1 {}          /* replace the number to the corresponding page number */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
 .tag {}                           /* tag page */
-	.tag-slug {}                  /* individual tag page (i.e. body.tag-news) */
-	.tag-paged-1 {}               /* replace the number to the corresponding page number */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
 .page-template {}                 /* custom page template page */
-	.page-template-page-php {}    /* individual page template (i.e. body.page-template-contact-php */
-	.page-paged-1 {}              /* replace the number to the corresponding page number */
-	.page-parent {}               /* parent page template */
-	.page-child {}                /* child page template */
-	.parent-pageid-1 {}           /* replace the number to the corresponding page number */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
 .logged-in {}                     /* if user is logged in */
 .paged {}                         /* paged items like search results or archives */
-	.paged-1 {}                   /* individual paged (i.e. body.paged-3) */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
 
 /*********************
 LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 90%;
+	width: 96%;
 	margin: 0 auto;
 }
-
-/*
-No Grid? Say Whaaaat?
-There's really no need for all that
-extraneous grid css since floating
-columns wouldn't really fit on such a
-small screen, so let's only bring it in
-when we're ready for it.
-*/
 
 /*********************
 LINK STYLES
 *********************/
 
 a, a:visited {
-	color: $bones-pink;
+	color: $link-color;
 
 	/* on hover */
 	&:hover, &:focus {
-		color: lighten($bones-pink, 9%);
+		color: $link-hover;
 	}
 
 	/* on click */
@@ -105,7 +96,7 @@ a, a:visited {
 		so it basically works like the :hover selector
 		for mobile devices.
 		*/
-		-webkit-tap-highlight-color : rgba(0,0,0,0);
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
 	}
 }
 
@@ -273,14 +264,14 @@ POSTS & CONTENT STYLES
 		.archive-title { }
 
 		/* want to style individual post classes? Booya! */
-		.post-id {} /* post by id (i.e. post-3) */
-		.post {} /* general post style */
-		.page {} /* general article on a page style */
-		.attachment {} /* general style on an attatchment */
-		.sticky {} /* sticky post style */
-		.hentry {} /* hentry class */
-		.category-slug {} /* style by category (i.e. category-videos) */
-		.tag-slug {} /* style by tag (i.e. tag-news) */
+		.post-id {}         /* post by id (i.e. post-3) */
+		.post {}            /* general post style */
+		.page {}            /* general article on a page style */
+		.attachment {}      /* general style on an attatchment */
+		.sticky {}          /* sticky post style */
+		.hentry {}          /* hentry class */
+		.category-slug {}   /* style by category (i.e. category-videos) */
+		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
 		/* post meta */
 		.meta {
@@ -353,7 +344,7 @@ POSTS & CONTENT STYLES
 				height: auto;
 			}
 
-			pre, code {
+			pre {
 				background: #eee;
 				border: 1px solid #cecece;
 				padding: 10px;
@@ -407,6 +398,7 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
+
 .page-navigation,
 .wp-prev-next {
 	margin: 1.1em 0 2.2em;
@@ -560,7 +552,7 @@ COMMENT STYLES
 			.alt {}
 			.odd {}
 			.even {}
-			.depth-1 {} /* change number for different depth */
+			.depth-1 {}           /* change number for different depth */
 			.byuser {}
 			.bypostauthor {}
 			.comment-author-admin {}
