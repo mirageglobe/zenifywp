@@ -48,7 +48,7 @@ The comments page for Bones
 	<?php else : // comments are closed ?>
 	
 	<!-- If comments are closed. -->
-	<p class="nocomments"><?php _e("Comments are closed.", "bonestheme"); ?></p>
+	<!--p class="nocomments"><?php _e("Comments are closed.", "bonestheme"); ?></p-->
 
 	<?php endif; ?>
 
