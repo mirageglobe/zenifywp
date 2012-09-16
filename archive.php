@@ -21,11 +21,9 @@
 					    	$author_id = $post->post_author;
 					    ?>
 						    <h1 class="archive-title h2">
-<<<<<<< HEAD
-						    	<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php echo get_the_author_meta('display_name'); ?>
-=======
+
 						    	<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php echo get_the_author_meta('display_name', $author_id); ?>
->>>>>>> 1.3
+
 						    </h1>
 					    <?php } elseif (is_day()) { ?>
 						    <h1 class="archive-title h2">
