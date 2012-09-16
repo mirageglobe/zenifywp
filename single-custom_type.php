@@ -29,11 +29,11 @@ single-bookmarks.php
 							
 							    <h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
 							
-							    <p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php echo get_the_term_list( get_the_ID(), 'custom_cat', "" ) ?>.</p>
+							    <p class="byline vcard"><?php _e("Posted", "bonestheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php echo get_the_term_list( get_the_ID(), 'custom_cat', "" ) ?>.</p>
 						
 						    </header> <!-- end article header -->
 					
-						    <section class="post-content clearfix">
+						    <section class="entry-content clearfix">
 							
 							    <?php the_content(); ?>
 					
@@ -45,7 +45,7 @@ single-bookmarks.php
 							
 						    </footer> <!-- end article footer -->
 						
-						    <?php comments_template(); // you may not need this ?>
+						    <?php comments_template(); ?>
 					
 					    </article> <!-- end article -->
 					
@@ -57,7 +57,7 @@ single-bookmarks.php
         						<header class="article-header">
         							<h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
         						</header>
-        						<section class="post-content">
+        						<section class="entry-content">
         							<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
         						</section>
         						<footer class="article-footer">
@@ -69,7 +69,7 @@ single-bookmarks.php
 			
 				    </div> <!-- end #main -->
     
-				    <?php get_sidebar(); // sidebar 1 ?>
+				    <?php get_sidebar(); ?>
 				    
 				</div> <!-- end #inner-content -->
     

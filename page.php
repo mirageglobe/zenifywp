@@ -14,11 +14,11 @@
 							
 							    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 							
-							    <p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>.</p>
+							    <p class="byline vcard"><?php _e("Posted", "bonestheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span>.</p>
 						
 						    </header> <!-- end article header -->
 					
-						    <section class="post-content clearfix" itemprop="articleBody">
+						    <section class="entry-content clearfix" itemprop="articleBody">
 							    <?php the_content(); ?>
 							</section> <!-- end article section -->
 						
@@ -32,15 +32,13 @@
 					
 					    </article> <!-- end article -->
 					
-					    <?php endwhile; ?>		
-					
-					    <?php else : ?>
+					    <?php endwhile; else : ?>
 					
     					    <article id="post-not-found" class="hentry clearfix">
     					    	<header class="article-header">
     					    		<h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
     					    	</header>
-    					    	<section class="post-content">
+    					    	<section class="entry-content">
     					    		<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
     					    	</section>
     					    	<footer class="article-footer">
@@ -52,7 +50,7 @@
 			
     				</div> <!-- end #main -->
     
-				    <?php get_sidebar(); // sidebar 1 ?>
+				    <?php get_sidebar(); ?>
 				    
 				</div> <!-- end #inner-content -->
     

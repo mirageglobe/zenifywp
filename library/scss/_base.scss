@@ -274,14 +274,14 @@ POSTS & CONTENT STYLES
 		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
 		/* post meta */
-		.meta {
+		.byline {
 			color: #999;
 
 			time {}
 		}
 
-		/* post content */
-		.post-content {
+		/* entry content */
+		.entry-content {
 
 			p {}
 
@@ -350,7 +350,7 @@ POSTS & CONTENT STYLES
 				padding: 10px;
 			}
 
-		} /* end .post-content */
+		} /* end .entry-content */
 
 		.wp-caption {
 			background: #eee;
@@ -832,5 +832,5 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.attribution {}
+	.copyright {}
 
