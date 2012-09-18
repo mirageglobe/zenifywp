@@ -137,13 +137,8 @@ function bones_scripts_and_styles() {
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
       wp_enqueue_script( 'comment-reply' );
     }
-<<<<<<< HEAD
-    
-    // adding scripts file in the footer
-=======
 
     //adding scripts file in the footer
->>>>>>> 1.3
     wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
     // enqueue styles and scripts
