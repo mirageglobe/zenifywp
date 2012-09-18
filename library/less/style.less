@@ -16,10 +16,13 @@ of the styles inside media queries.
 //
 
 // import normalize
-@import "normalize.less";
+@import "_normalize.less";
+
+// import grid
+@import "_grid.less";
 
 // import mixins
-@import "mixins.less";
+@import "_mixins.less";
 
 /*
 BASE (MOBILE) SIZE
@@ -29,7 +32,7 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 */
 
 // styles in base.less
-@import "base.less";
+@import "_base.less";
 
 /*
 LARGER MOBILE DEVICES
@@ -40,7 +43,7 @@ tweeners.
 @media only screen and (min-width: 481px) {
 
 	// styles in 481up.less
-	@import "481up.less";
+	@import "_481up.less";
 
 } // end of media query
 
@@ -53,7 +56,7 @@ you can add resource intensive styles.
 @media only screen and (min-width: 768px) {
 
 	// styles in 768up.less
-	@import "768up.less";
+	@import "_768up.less";
 
 } // end of media query
 
@@ -66,7 +69,7 @@ you can add resource intensive styles.
 @media only screen and (min-width: 1030px) {
 
 	// styles in 1030up.less
-	@import "1030up.less";
+	@import "_1030up.less";
 
 } // end of media query
 
@@ -77,7 +80,7 @@ This is for the larger monitors and possibly full screen viewers.
 @media only screen and (min-width: 1240px) {
 
 	// styles in 1240up.less
-	@import "1240up.less";
+	@import "_1240up.less";
 
 } // end of media query
 
@@ -92,7 +95,7 @@ query for retina AND a certain size if you want. Go Nuts.
        only screen and (min-device-pixel-ratio: 1.5) {
 
 	// styles in 2x.less
-	@import "2x.less";
+	@import "_2x.less";
 
 } // end of media query
 
@@ -103,72 +106,8 @@ sense to print at the bottom. Things like nav, ads, and forms should
 be set to display none.
 */
 @media print {
-	* {
-		background: transparent !important;
-		color: black !important;
-		text-shadow: none !important;
-		filter:none !important;
-		-ms-filter: none !important;
-	}
+	
+	@import "_print.less";
+	
+} // end of media query
 
-	a, a:visited {
-		color: #444 !important;
-		text-decoration: underline;
-
-		// show links on printed pages
-		&:after {
-			content: " (" attr(href) ")";
-		}
-
-		// show title too
-		abbr[title]:after {
-			content: " (" attr(title) ")";
-		}
-	}
-
-	.ir a:after,
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
-		content: "";
-	}
-
-	pre, blockquote {
-		border: 1px solid #999;
-		page-break-inside: avoid;
-	}
-
-	thead {
-		display: table-header-group;
-	}
-
-	tr, img {
-		page-break-inside: avoid;
-	}
-
-	img {
-		max-width: 100% !important;
-	}
-
-    @page {
-    	margin: 0.5cm;
-    }
-
-    p, h2, h3 {
-    	orphans: 3;
-    	widows: 3;
-    }
-
-    h2,
-    h3 {
-    	page-break-after: avoid;
-    }
-
-    // hide content people who print don't need to see
-    .sidebar,
-    .page-navigation,
-    .wp-prev-next,
-    .respond-form,
-    nav {
-    	display: none;
-    }
-}
