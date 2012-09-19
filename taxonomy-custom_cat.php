@@ -30,14 +30,14 @@ taxonomy-shoes.php
 						    <header class="article-header">
 							
 							    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-							
-							    <p class="byline vcard"><?php _e("Posted", "bonestheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php echo get_the_term_list( get_the_ID(), 'custom_cat', "" ) ?>.</p>
+                  <p class="byline vcard"><?php
+                    printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(__('F js, Y', 'bonestheme')), bones_get_the_author_posts_link(), get_the_term_list( get_the_ID(), 'custom_cat', "" ));
+                  ?></p>
 						
 						    </header> <!-- end article header -->
 					
 						    <section class="entry-content">
-						
-							    <?php the_excerpt('<span class="read-more">Read More &raquo;</span>'); ?>
+							    <?php the_excerpt('<span class="read-more">' . __('Read More &raquo;', 'bonestheme') . '</span>'); ?>
 					
 						    </section> <!-- end article section -->
 						
