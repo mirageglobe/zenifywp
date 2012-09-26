@@ -18,9 +18,6 @@ of the styles inside media queries.
 // import normalize
 @import "normalize";
 
-// import grids
-@import "grid";
-
 // import mixins
 @import "mixins";
 
@@ -54,6 +51,9 @@ in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 */
 @media only screen and (min-width: 768px) {
+
+	// import grids
+	@import "grid";
 
 	// styles in 768up.scss
 	@import "768up";
