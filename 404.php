@@ -26,7 +26,7 @@
 				
 							</section> <!-- end search section -->
 						
-							<footer class="article-header">
+							<footer class="article-footer">
 							
 							    <p><?php _e("This is the 404.php template.", "bonestheme"); ?></p>
 							
