@@ -169,9 +169,23 @@ h5, .h5 {
 06. HEADER SYTLES
 *********************/
 
-.header {}
+.header {
+	#inner-header {}
 
 	#logo {}
+
+	nav {
+		ul.nav {
+			li {
+				a {}
+
+				&:first-child {}
+
+				&:last-child {}
+			}
+		}
+	}
+}
 
 /*********************
 07. NAVIGATION STYLES
@@ -263,6 +277,8 @@ and more scalable.
 
 #content {
 	margin-top: 2.2em;
+
+	#inner-content {}
 }
 
 		.hentry {
@@ -829,6 +845,19 @@ and more scalable.
 
 .footer {
 	clear: both;
+	#inner-footer {
+	}
+	nav {
+		ul.nav {
+			li {
+				a {}
+
+				&:first-child {}
+
+				&:last-child {}
+			}
+		}
+	}
 }
 
 	/*
