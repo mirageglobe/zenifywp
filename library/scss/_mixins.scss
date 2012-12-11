@@ -8,8 +8,7 @@ This is where you can take advantage of Sass' great features:
 Mixins & Constants. I won't go in-depth on how they work exactly,
 there are a few articles below that will help do that. What I will
 tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques like box shadow and
-border-radius.
+changing a color or adding CSS3 techniques gradients.
 
 A WORD OF WARNING: It's very easy to overdo it here. Be careful and
 remember less is more.
@@ -32,13 +31,13 @@ TOOLS
 *********************/
 
 // BORDER-BOX ALL THE THINGS! (http://paulirish.com/2012/box-sizing-border-box-ftw/)
-* { 
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing:    border-box; 
-	box-sizing:         border-box; 
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
 }
 
-// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ 
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
 .image-replacement {
 	text-indent: 100%;
 	white-space: nowrap;
@@ -110,7 +109,7 @@ span.amp {
   font-style: italic;
 }
 
-// text alignment 
+// text alignment
 .text-left   { text-align: left; }
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
@@ -148,27 +147,6 @@ span.amp {
 }
 
 /*********************
-BORDER RADIUS
-*********************/
-
-/*
-I totally rewrote this to be cleaner and easier to use.
-You'll need to be using Sass 3.2+ for these to work.
-Thanks to @anthonyshort for the inspiration on these.
-USAGE: @include border-radius(4px 4px 0 0);
-*/
-
-@mixin border-radius($radius...) {
-	// defining prefixes so we can use them in mixins below
-	$prefixes:      ("-webkit", "-moz", "-ms", "-o",  "");
-  @each $prefix in $prefixes {
-    #{$prefix}-border-radius: $radius;
-  }
-
-  border-radius: $radius;
-}
-
-/*********************
 TRANISTION
 *********************/
 
@@ -181,36 +159,13 @@ USAGE: @include transition(all 0.2s ease-in-out);
 
 @mixin transition($transition...) {
 	// defining prefixes so we can use them in mixins below
-	$prefixes:      ("-webkit", "-moz", "-ms", "-o",  "");
+	$prefixes:      ("-webkit", "-ms", "-o",  "");
   @each $prefix in $prefixes {
     #{$prefix}-transition: $transition;
   }
 
   transition: $transition;
 }
-
-
-/*********************
-BOX SHADOWS
-*********************/
-
-/*
-I totally rewrote this to be cleaner and easier to use.
-You'll need to be using Sass 3.2+ for these to work.
-Thanks to @anthonyshort for the inspiration on these.
-USAGE: @include box-shadow(inset 0 0 4px rgba(0,0,0,0.22));
-*/
-
-@mixin box-shadow($shadow...) {
-	// defining prefixes so we can use them in mixins below
-	$prefixes:      ("-webkit", "-moz", "-ms", "-o",  "");
-  @each $prefix in $prefixes {
-    #{$prefix}-box-shadow: $shadow;
-  }
-
-  box-shadow: $shadow;
-}
-
 
 /*********************
 CSS3 GRADIENTS
@@ -262,7 +217,7 @@ BUTTONS
 	cursor: pointer;
 	margin-bottom: 20px;
 	line-height: 21px;
-	@include border-radius(4px);
+	border-radius: 4px;
 	@include css-gradient($link-color, darken($link-color, 5%));
 
 
@@ -283,7 +238,7 @@ BUTTONS
 	border-color: darken($bones-blue, 10%);
 	text-shadow: 0 1px 1px darken($bones-blue, 10%);
 	@include css-gradient( $bones-blue, darken($bones-blue, 5%) );
-	@include box-shadow(inset 0 0 3px lighten($bones-blue, 16%));
+	box-shadow: inset 0 0 3px lighten($bones-blue, 16%);
 
 	&:hover, &:focus {
 		border-color: darken($bones-blue, 15%);

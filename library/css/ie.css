@@ -27,8 +27,7 @@ This is where you can take advantage of Sass' great features:
 Mixins & Constants. I won't go in-depth on how they work exactly,
 there are a few articles below that will help do that. What I will
 tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques like box shadow and
-border-radius.
+changing a color or adding CSS3 techniques gradients.
 
 A WORD OF WARNING: It's very easy to overdo it here. Be careful and
 remember less is more.
@@ -128,15 +127,6 @@ span.amp {
   background: #e6efc2; }
 
 /*********************
-BORDER RADIUS
-*********************/
-/*
-I totally rewrote this to be cleaner and easier to use.
-You'll need to be using Sass 3.2+ for these to work.
-Thanks to @anthonyshort for the inspiration on these.
-USAGE: @include border-radius(4px 4px 0 0);
-*/
-/*********************
 TRANISTION
 *********************/
 /*
@@ -144,15 +134,6 @@ I totally rewrote this to be cleaner and easier to use.
 You'll need to be using Sass 3.2+ for these to work.
 Thanks to @anthonyshort for the inspiration on these.
 USAGE: @include transition(all 0.2s ease-in-out);
-*/
-/*********************
-BOX SHADOWS
-*********************/
-/*
-I totally rewrote this to be cleaner and easier to use.
-You'll need to be using Sass 3.2+ for these to work.
-Thanks to @anthonyshort for the inspiration on these.
-USAGE: @include box-shadow(inset 0 0 4px rgba(0,0,0,0.22));
 */
 /*********************
 CSS3 GRADIENTS
@@ -184,11 +165,6 @@ BUTTONS
   cursor: pointer;
   margin-bottom: 20px;
   line-height: 21px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  -border-radius: 4px;
   border-radius: 4px;
   background-color: #e40f42;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f01d4f), to(#e40f42));
@@ -224,11 +200,6 @@ BUTTONS
   background-image: -moz-linear-gradient(top, #1990db, #1681c4);
   background-image: -o-linear-gradient(top, #1990db, #1681c4);
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
-  -webkit-box-shadow: inset 0 0 3px #59b3ec;
-  -moz-box-shadow: inset 0 0 3px #59b3ec;
-  -ms-box-shadow: inset 0 0 3px #59b3ec;
-  -o-box-shadow: inset 0 0 3px #59b3ec;
-  -box-shadow: inset 0 0 3px #59b3ec;
   box-shadow: inset 0 0 3px #59b3ec; }
   .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
     border-color: #116396;
