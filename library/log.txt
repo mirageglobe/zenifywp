@@ -12,6 +12,11 @@ Author: Eddie Machado
 BONES CHANGE LOG & HISTORY
 ******************************************************************/
 
+/* 1.4 update */
+- updated Modernizr to 2.6.2
+- merged a ton of pull requests (thanks guys and gals!)
+- added windows 8 tile support
+
 /* v1.3 update */
 - removed version number from scripts & styles (thanks James)
 - removed LESS (it's over Johnny, It's OVER!)
