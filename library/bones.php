@@ -121,7 +121,7 @@ SCRIPTS & ENQUEUEING
 
 // loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
-  global $wp_styles; // call global $wp_styles variable so we can add condtional comments for ie.css the WordPress way
+  global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
   if (!is_admin()) {
 
     // modernizr (without media query polyfill)
@@ -146,7 +146,7 @@ function bones_scripts_and_styles() {
     wp_enqueue_style( 'bones-stylesheet' );
     wp_enqueue_style('bones-ie-only');
 
-    $wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional comments for ie.css
+    $wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
     /*
     I recommend using a plugin to call jQuery
