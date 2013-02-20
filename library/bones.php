@@ -35,7 +35,6 @@ function bones_ahoy() {
     // enqueue base scripts and styles
     add_action('wp_enqueue_scripts', 'bones_scripts_and_styles', 999);
     // ie conditional wrapper
-    add_filter( 'style_loader_tag', 'bones_ie_conditional', 10, 2 );
 
     // launching this stuff after theme setup
     add_action('after_setup_theme','bones_theme_support');
@@ -122,6 +121,7 @@ SCRIPTS & ENQUEUEING
 
 // loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
+  global $wp_styles; // call global $wp_styles variable so we can add condtional comments for ie.css the WordPress way
   if (!is_admin()) {
 
     // modernizr (without media query polyfill)
@@ -145,6 +145,9 @@ function bones_scripts_and_styles() {
     wp_enqueue_script( 'bones-modernizr' );
     wp_enqueue_style( 'bones-stylesheet' );
     wp_enqueue_style('bones-ie-only');
+
+    $wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional comments for ie.css
+
     /*
     I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached
@@ -154,14 +157,6 @@ function bones_scripts_and_styles() {
     wp_enqueue_script( 'bones-js' );
 
   }
-}
-
-// adding the conditional wrapper around ie stylesheet
-// source: http://code.garyjones.co.uk/ie-conditional-style-sheets-wordpress/
-function bones_ie_conditional( $tag, $handle ) {
-	if ( 'bones-ie-only' == $handle )
-		$tag = '<!--[if lt IE 9]>' . "\n" . $tag . '<![endif]-->' . "\n";
-	return $tag;
 }
 
 /*********************
