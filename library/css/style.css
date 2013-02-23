@@ -1570,7 +1570,7 @@ you can add resource intensive styles.
   }
   .nav li ul.sub-menu,
   .nav li ul.children {
-    width: 200px;
+    margin-top: 0;
     border: 1px solid #ccc;
     border-top: 0;
     position: absolute;
