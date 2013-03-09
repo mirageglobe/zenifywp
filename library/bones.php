@@ -37,8 +37,8 @@ function bones_ahoy() {
     // ie conditional wrapper
 
     // launching this stuff after theme setup
-    // add_action('after_setup_theme','bones_theme_support');
     bones_theme_support();
+    // add_action('init','bones_theme_support');
 
     // adding sidebars to Wordpress (these are created in functions.php)
     add_action( 'widgets_init', 'bones_register_sidebars' );
@@ -378,7 +378,7 @@ function bones_filter_ptags_on_images($content){
 function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a href="'. get_permalink($post->ID) . '" title="Read '.get_the_title($post->ID).'">Read more &raquo;</a>';
+	return '...  <a href="'. get_permalink($post->ID) . '" title="'. __('Read', 'bonestheme') . get_the_title($post->ID).'">'. __('Read more &raquo;', 'bonestheme') .'</a>'';
 }
 
 /*
