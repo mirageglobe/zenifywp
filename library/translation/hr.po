@@ -277,7 +277,7 @@ msgid "Please activate some Widgets."
 msgstr "Molim aktivirajte neke Widgete."
 
 #: single-custom_type.php:32 single.php:17 taxonomy-custom_cat.php:34
-msgid "F js, Y"
+msgid "F jS, Y"
 msgstr "j. F Y."
 
 #: single-custom_type.php:44
