@@ -771,6 +771,11 @@ and will be used across all viewports.
 /*********************
 01. GENERAL STYLES
 *********************/
+html,
+body {
+  /* height: 100%; */
+
+}
 body {
   font-family: "Georgia", Cambria, Times New Roman, Times, serif;
   font-size: 100%;
@@ -867,7 +872,7 @@ h5,
 .h5 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 500;
+  font-weight: 400;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1020,12 +1025,14 @@ and more scalable.
 }
 /* end .entry-content */
 .wp-caption {
+  max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 
 }
 .wp-caption img {
+  max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
