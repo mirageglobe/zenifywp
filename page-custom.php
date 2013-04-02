@@ -14,7 +14,7 @@ Template Name: Custom Page Example
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article-header">
 
@@ -26,7 +26,7 @@ Template Name: Custom Page Example
 
 								</header> <!-- end article header -->
 
-								<section class="entry-content">
+								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
 								</section> <!-- end article section -->
 
@@ -39,9 +39,7 @@ Template Name: Custom Page Example
 
 							</article> <!-- end article -->
 
-							<?php endwhile; ?>
-
-							<?php else : ?>
+							<?php endwhile; else : ?>
 
 									<article id="post-not-found" class="hentry clearfix">
 											<header class="article-header">
