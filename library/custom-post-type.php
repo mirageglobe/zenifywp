@@ -20,19 +20,19 @@ function custom_post_example() {
 	// creating (registering) the custom type 
 	register_post_type( 'custom_type', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
-		array('labels' => array(
-			'name' => __('Custom Types', 'bonestheme'), /* This is the Title of the Group */
-			'singular_name' => __('Custom Post', 'bonestheme'), /* This is the individual type */
-			'all_items' => __('All Custom Posts', 'bonestheme'), /* the all items menu item */
-			'add_new' => __('Add New', 'bonestheme'), /* The add new menu item */
-			'add_new_item' => __('Add New Custom Type', 'bonestheme'), /* Add New Display Title */
+		array( 'labels' => array(
+			'name' => __( 'Custom Types', 'bonestheme' ), /* This is the Title of the Group */
+			'singular_name' => __( 'Custom Post', 'bonestheme' ), /* This is the individual type */
+			'all_items' => __( 'All Custom Posts', 'bonestheme' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'bonestheme' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New Custom Type', 'bonestheme' ), /* Add New Display Title */
 			'edit' => __( 'Edit', 'bonestheme' ), /* Edit Dialog */
-			'edit_item' => __('Edit Post Types', 'bonestheme'), /* Edit Display Title */
-			'new_item' => __('New Post Type', 'bonestheme'), /* New Display Title */
-			'view_item' => __('View Post Type', 'bonestheme'), /* View Display Title */
-			'search_items' => __('Search Post Type', 'bonestheme'), /* Search Custom Type Title */ 
-			'not_found' =>  __('Nothing found in the Database.', 'bonestheme'), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __('Nothing found in Trash', 'bonestheme'), /* This displays if there is nothing in the trash */
+			'edit_item' => __( 'Edit Post Types', 'bonestheme' ), /* Edit Display Title */
+			'new_item' => __( 'New Post Type', 'bonestheme' ), /* New Display Title */
+			'view_item' => __( 'View Post Type', 'bonestheme' ), /* View Display Title */
+			'search_items' => __( 'Search Post Type', 'bonestheme' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'bonestheme' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'bonestheme' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
 			'description' => __( 'This is the example custom post type', 'bonestheme' ), /* Custom Type Description */
@@ -53,9 +53,9 @@ function custom_post_example() {
 	); /* end of register post type */
 	
 	/* this adds your post categories to your custom post type */
-	register_taxonomy_for_object_type('category', 'custom_type');
+	register_taxonomy_for_object_type( 'category', 'custom_type' );
 	/* this adds your post tags to your custom post type */
-	register_taxonomy_for_object_type('post_tag', 'custom_type');
+	register_taxonomy_for_object_type( 'post_tag', 'custom_type' );
 	
 } 
 

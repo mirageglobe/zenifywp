@@ -17,23 +17,23 @@ right up top and clean.
 *********************/
 
 // we're firing all out initial functions at the start
-add_action('after_setup_theme','bones_ahoy', 16);
+add_action( 'after_setup_theme', 'bones_ahoy', 16 );
 
 function bones_ahoy() {
 
     // launching operation cleanup
-    add_action('init', 'bones_head_cleanup');
+    add_action( 'init', 'bones_head_cleanup' );
     // remove WP version from RSS
-    add_filter('the_generator', 'bones_rss_version');
+    add_filter( 'the_generator', 'bones_rss_version' );
     // remove pesky injected css for recent comments widget
     add_filter( 'wp_head', 'bones_remove_wp_widget_recent_comments_style', 1 );
     // clean up comment styles in the head
-    add_action('wp_head', 'bones_remove_recent_comments_style', 1);
+    add_action( 'wp_head', 'bones_remove_recent_comments_style', 1 );
     // clean up gallery output in wp
-    add_filter('gallery_style', 'bones_gallery_style');
+    add_filter( 'gallery_style', 'bones_gallery_style' );
 
     // enqueue base scripts and styles
-    add_action('wp_enqueue_scripts', 'bones_scripts_and_styles', 999);
+    add_action( 'wp_enqueue_scripts', 'bones_scripts_and_styles', 999 );
     // ie conditional wrapper
 
     // launching this stuff after theme setup
@@ -45,9 +45,9 @@ function bones_ahoy() {
     add_filter( 'get_search_form', 'bones_wpsearch' );
 
     // cleaning up random code around images
-    add_filter('the_content', 'bones_filter_ptags_on_images');
+    add_filter( 'the_content', 'bones_filter_ptags_on_images' );
     // cleaning up excerpt
-    add_filter('excerpt_more', 'bones_excerpt_more');
+    add_filter( 'excerpt_more', 'bones_excerpt_more' );
 
 } /* end bones ahoy */
 
@@ -78,10 +78,10 @@ function bones_head_cleanup() {
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 	// WP version
 	remove_action( 'wp_head', 'wp_generator' );
-  // remove WP version from css
-  add_filter( 'style_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
-  // remove Wp version from scripts
-  add_filter( 'script_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
+	// remove WP version from css
+	add_filter( 'style_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
+	// remove Wp version from scripts
+	add_filter( 'script_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
 
 } /* end bones head cleanup */
 
@@ -97,8 +97,8 @@ function bones_remove_wp_ver_css_js( $src ) {
 
 // remove injected CSS for recent comments widget
 function bones_remove_wp_widget_recent_comments_style() {
-   if ( has_filter('wp_head', 'wp_widget_recent_comments_style') ) {
-      remove_filter('wp_head', 'wp_widget_recent_comments_style' );
+   if ( has_filter( 'wp_head', 'wp_widget_recent_comments_style' ) ) {
+      remove_filter( 'wp_head', 'wp_widget_recent_comments_style' );
    }
 }
 
@@ -106,13 +106,13 @@ function bones_remove_wp_widget_recent_comments_style() {
 function bones_remove_recent_comments_style() {
   global $wp_widget_factory;
   if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
-    remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+    remove_action( 'wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style') );
   }
 }
 
 // remove injected CSS from gallery
 function bones_gallery_style($css) {
-  return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
+  return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
 
@@ -136,7 +136,7 @@ function bones_scripts_and_styles() {
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-      wp_enqueue_script( 'comment-reply' );
+		wp_enqueue_script( 'comment-reply' );
     }
 
     //adding scripts file in the footer
@@ -145,7 +145,7 @@ function bones_scripts_and_styles() {
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' );
     wp_enqueue_style( 'bones-stylesheet' );
-    wp_enqueue_style('bones-ie-only');
+    wp_enqueue_style( 'bones-ie-only' );
 
     $wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
@@ -168,7 +168,7 @@ THEME SUPPORT
 function bones_theme_support() {
 
 	// wp thumbnails (sizes handled in functions.php)
-	add_theme_support('post-thumbnails');
+	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);
@@ -283,17 +283,19 @@ RELATED POSTS FUNCTION
 function bones_related_posts() {
 	echo '<ul id="bones-related-posts">';
 	global $post;
-	$tags = wp_get_post_tags($post->ID);
+	$tags = wp_get_post_tags( $post->ID );
 	if($tags) {
-		foreach($tags as $tag) { $tag_arr .= $tag->slug . ','; }
+		foreach( $tags as $tag ) { 
+			$tag_arr .= $tag->slug . ',';
+		}
         $args = array(
         	'tag' => $tag_arr,
         	'numberposts' => 5, /* you can change this to show more */
         	'post__not_in' => array($post->ID)
      	);
-        $related_posts = get_posts($args);
+        $related_posts = get_posts( $args );
         if($related_posts) {
-        	foreach ($related_posts as $post) : setup_postdata($post); ?>
+        	foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
 	           	<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 	        <?php endforeach; }
 	    else { ?>
@@ -377,7 +379,7 @@ function bones_filter_ptags_on_images($content){
 function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'bonestheme') . get_the_title($post->ID).'">'. __('Read more &raquo;', 'bonestheme') .'</a>';
+return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __( 'Read', 'bonestheme' ) . get_the_title($post->ID).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
 }
 
 /*
