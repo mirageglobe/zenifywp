@@ -23,14 +23,14 @@ sidebars, comments, ect.
 	- custom google+ integration
 	- adding custom fields to user profiles
 */
-require_once('library/bones.php'); // if you remove this, bones will break
+require_once( 'library/bones.php' ); // if you remove this, bones will break
 /*
 2. library/custom-post-type.php
 	- an example custom post type
 	- example custom taxonomy (like categories)
 	- example custom taxonomy (like tags)
 */
-require_once('library/custom-post-type.php'); // you can disable this if you like
+require_once( 'library/custom-post-type.php' ); // you can disable this if you like
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets
@@ -38,12 +38,12 @@ require_once('library/custom-post-type.php'); // you can disable this if you lik
 	- adding custom login css
 	- changing text in footer of admin
 */
-// require_once('library/admin.php'); // this comes turned off by default
+// require_once( 'library/admin.php' ); // this comes turned off by default
 /*
 4. library/translation/translation.php
 	- adding support for other languages
 */
-// require_once('library/translation/translation.php'); // this comes turned off by default
+// require_once( 'library/translation/translation.php' ); // this comes turned off by default
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
@@ -76,8 +76,8 @@ you like. Enjoy!
 function bones_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'bonestheme'),
-		'description' => __('The first (primary) sidebar.', 'bonestheme'),
+		'name' => __( 'Sidebar 1', 'bonestheme' ),
+		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -94,8 +94,8 @@ function bones_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __('Sidebar 2', 'bonestheme'),
-		'description' => __('The second (secondary) sidebar.', 'bonestheme'),
+		'name' => __( 'Sidebar 2', 'bonestheme' ),
+		'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -113,7 +113,7 @@ function bones_register_sidebars() {
 /************* COMMENT LAYOUT *********************/
 
 // Comment Layout
-function bones_comments($comment, $args, $depth) {
+function bones_comments( $comment, $args, $depth ) {
    $GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class(); ?>>
 		<article id="comment-<?php comment_ID(); ?>" class="clearfix">
@@ -129,15 +129,15 @@ function bones_comments($comment, $args, $depth) {
 					// create variable
 					$bgauthemail = get_comment_author_email();
 				?>
-				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>?s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
+				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
 				<!-- end custom gravatar call -->
-				<?php printf(__('<cite class="fn">%s</cite>', 'bonestheme'), get_comment_author_link()) ?>
-				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__('F jS, Y', 'bonestheme')); ?> </a></time>
-				<?php edit_comment_link(__('(Edit)', 'bonestheme'),'  ','') ?>
+				<?php printf(__( '<cite class="fn">%s</cite>', 'bonestheme' ), get_comment_author_link()) ?>
+				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
+				<?php edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ?>
 			</header>
 			<?php if ($comment->comment_approved == '0') : ?>
 				<div class="alert alert-info">
-					<p><?php _e('Your comment is awaiting moderation.', 'bonestheme') ?></p>
+					<p><?php _e( 'Your comment is awaiting moderation.', 'bonestheme' ) ?></p>
 				</div>
 			<?php endif; ?>
 			<section class="comment_content clearfix">
@@ -154,9 +154,9 @@ function bones_comments($comment, $args, $depth) {
 // Search Form
 function bones_wpsearch($form) {
 	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-	<label class="screen-reader-text" for="s">' . __('Search for:', 'bonestheme') . '</label>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...','bonestheme').'" />
-	<input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
+	<label class="screen-reader-text" for="s">' . __( 'Search for:', 'bonestheme' ) . '</label>
+	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . esc_attr__( 'Search the Site...', 'bonestheme' ) . '" />
+	<input type="submit" id="searchsubmit" value="' . esc_attr__( 'Search' ) .'" />
 	</form>';
 	return $form;
 } // don't remove this bracket!
