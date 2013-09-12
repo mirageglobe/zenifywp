@@ -17,20 +17,20 @@
 										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&amp;</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', ') );
 									?></p>
 
-								</header> <!-- end article header -->
+								</header> <?php // end article header ?>
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
-								</section> <!-- end article section -->
+								</section> <?php // end article section ?>
 
 								<footer class="article-footer">
 									<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
-								</footer> <!-- end article footer -->
+								</footer> <?php // end article footer ?>
 
 								<?php comments_template(); ?>
 
-							</article> <!-- end article -->
+							</article> <?php // end article ?>
 
 						<?php endwhile; ?>
 
@@ -50,12 +50,12 @@
 
 						<?php endif; ?>
 
-					</div> <!-- end #main -->
+					</div> <?php // end #main ?>
 
 					<?php get_sidebar(); ?>
 
-				</div> <!-- end #inner-content -->
+				</div> <?php // end #inner-content ?>
 
-			</div> <!-- end #content -->
+			</div> <?php // end #content ?>
 
 <?php get_footer(); ?>

@@ -8,15 +8,15 @@
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
-				</div> <!-- end #inner-footer -->
+				</div> <?php // end #inner-footer ?>
 
-			</footer> <!-- end footer -->
+			</footer> <?php // end footer ?>
 
-		</div> <!-- end #container -->
+		</div> <?php // end #container ?>
 
-		<!-- all js scripts are loaded in library/bones.php -->
+		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 
 	</body>
 
-</html> <!-- end page. what a ride! -->
+</html> <?php // end page. what a ride! ?>
