@@ -19,19 +19,19 @@
 										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), bones_get_the_author_posts_link());
 									?></p>
 
-								</header> <!-- end article header -->
+								</header> <?php // end article header ?>
 
 								<section class="entry-content clearfix">
 
 									<?php the_excerpt(); ?>
 
-								</section> <!-- end article section -->
+								</section> <?php // end article section ?>
 
 								<footer class="article-footer">
 
-								</footer> <!-- end article footer -->
+								</footer> <?php // end article footer ?>
 
-							</article> <!-- end article -->
+							</article> <?php // end article ?>
 
 							<?php endwhile; ?>
 
@@ -62,12 +62,12 @@
 
 							<?php endif; ?>
 
-						</div> <!-- end #main -->
+						</div> <?php // end #main ?>
 
 						<?php get_sidebar(); ?>
 
-								</div> <!-- end #inner-content -->
+								</div> <?php // end #inner-content ?>
 
-			</div> <!-- end #content -->
+			</div> <?php // end #content ?>
 
 <?php get_footer(); ?>
