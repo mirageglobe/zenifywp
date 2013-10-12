@@ -58,6 +58,6 @@
 						<?php bones_main_nav(); ?>
 					</nav>
 
-				</div> <?php // end #inner-header ?>
+				</div>
 
-			</header> <?php // end header ?>
+			</header>

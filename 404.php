@@ -12,32 +12,32 @@
 
 								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
 
-							</header> <?php // end article header ?>
+							</header>
 
 							<section class="entry-content">
 
 								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
 
-							</section> <?php // end article section ?>
+							</section>
 
 							<section class="search">
 
 									<p><?php get_search_form(); ?></p>
 
-							</section> <?php // end search section ?>
+							</section>
 
 							<footer class="article-footer">
 
 									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
 
-							</footer> <?php // end article footer ?>
+							</footer>
 
-						</article> <?php // end article ?>
+						</article>
 
-					</div> <?php // end #main ?>
+					</div>
 
-				</div> <?php // end #inner-content ?>
+				</div>
 
-			</div> <?php // end #content ?>
+			</div>
 
 <?php get_footer(); ?>

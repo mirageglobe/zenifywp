@@ -34,18 +34,18 @@ taxonomy-shoes.php
 										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' )), bones_get_the_author_posts_link(), get_the_term_list( get_the_ID(), 'custom_cat', "" ) );
 									?></p>
 
-								</header> <?php // end article header ?>
+								</header>
 
 								<section class="entry-content">
 									<?php the_excerpt( '<span class="read-more">' . __( 'Read More &raquo;', 'bonestheme' ) . '</span>' ); ?>
 
-								</section> <?php // end article section ?>
+								</section>
 
 								<footer class="article-footer">
 
-								</footer> <?php // end article footer ?>
+								</footer>
 
-							</article> <?php // end article ?>
+							</article>
 
 							<?php endwhile; ?>
 
@@ -76,12 +76,12 @@ taxonomy-shoes.php
 
 							<?php endif; ?>
 
-						</div> <?php // end #main ?>
+						</div>
 
 						<?php get_sidebar(); ?>
 
-				</div> <?php // end #inner-content ?>
+				</div>
 
-			</div> <?php // end #content ?>
+			</div>
 
 <?php get_footer(); ?>
