@@ -24,7 +24,7 @@ function disable_default_dashboard_widgets() {
 	remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'core' );  // Incoming Links Widget
 	remove_meta_box( 'dashboard_plugins', 'dashboard', 'core' );         // Plugins Widget
 
-	// remove_meta_box('dashboard_quick_press', 'dashboard', 'core' );  // Quick Press Widget
+	// remove_meta_box('dashboard_quick_press', 'dashboard', 'core' );   // Quick Press Widget
 	remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'core' );   // Recent Drafts Widget
 	remove_meta_box( 'dashboard_primary', 'dashboard', 'core' );         //
 	remove_meta_box( 'dashboard_secondary', 'dashboard', 'core' );       //
@@ -56,8 +56,8 @@ function bones_rss_dashboard_widget() {
 	if ( function_exists( 'fetch_feed' ) ) {
 		include_once( ABSPATH . WPINC . '/feed.php' );               // include the required file
 		$feed = fetch_feed( 'http://themble.com/feed/rss/' );        // specify the source feed
-		$limit = $feed->get_item_quantity(7);                      // specify number of items
-		$items = $feed->get_items(0, $limit);                      // create an array of items
+		$limit = $feed->get_item_quantity(7);                        // specify number of items
+		$items = $feed->get_items(0, $limit);                        // create an array of items
 	}
 	if ($limit == 0) echo '<div>The RSS Feed is either empty or unavailable.</div>';   // fallback message
 	else foreach ($items as $item) { ?>
