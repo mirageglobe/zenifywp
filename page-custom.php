@@ -24,20 +24,20 @@ Template Name: Custom Page Example
 									?></p>
 
 
-								</header> <?php // end article header ?>
+								</header>
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
-								</section> <?php // end article section ?>
+								</section>
 
 								<footer class="article-footer">
 									<p class="clearfix"><?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?></p>
 
-								</footer> <?php // end article footer ?>
+								</footer>
 
 								<?php comments_template(); ?>
 
-							</article> <?php // end article ?>
+							</article>
 
 							<?php endwhile; else : ?>
 
@@ -55,12 +55,12 @@ Template Name: Custom Page Example
 
 							<?php endif; ?>
 
-						</div> <?php // end #main ?>
+						</div>
 
 						<?php get_sidebar(); ?>
 
-				</div> <?php // end #inner-content ?>
+				</div>
 
-			</div> <?php // end #content ?>
+			</div>
 
 <?php get_footer(); ?>
