@@ -2,7 +2,12 @@
 Bone by DracoTurtur
 ================================================
 
-Author:     Jimmy MG Lim
+Background
+================================================
+Author:     Jimmy MG Lim (mirageglobe@gmail.com)
+
+Twitter:    @mirageglobe
+
 Website:    http://www.dracoturtur.com
 
 Bone is designed to make the life of developers easier. It's built
