@@ -8,7 +8,9 @@ Author:     Jimmy MG Lim (mirageglobe@gmail.com)
 
 Twitter:    @mirageglobe
 
-Website:    http://www.dracoturtur.com
+Website:    http://www.mirageglobe.com
+
+Company:    http://www.dracoturtur.com
 
 Bone is designed to make the life of developers easier. It's built
 using HTML5 & has a strong semantic foundation. It was updated recently
