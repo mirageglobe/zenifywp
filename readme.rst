@@ -19,9 +19,10 @@ It's constantly growing so be sure to check back often if you are a
 frequent user. This is based on Bones by Eddie Machado http://themble.com/bones
 
 Special Thanks to:
--Eddie Machado
--Paul Irish & the HTML5 Boilerplate
--and several other developers
+
+- Eddie Machado
+- Paul Irish & the HTML5 Boilerplate
+- and several other developers
 
 License
 ================================================
