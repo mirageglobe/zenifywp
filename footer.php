@@ -1,18 +1,6 @@
 		<div class="container">
-			<footer class="footer" role="contentinfo">
-
-				<div id="inner-footer" class="wrap clearfix">
-
-					<nav role="navigation">
-							<?php // bones_footer_links(); ?>
-					</nav>
-
-					<p class="source-org copyright">&copy; 2013 - <?php echo date('Y'); ?> &middot; <?php bloginfo( 'name' ); ?> &middot; </p>
-
-				</div>
-
-			</footer>
-		</div>
+            <p class="source-org copyright">&copy; 2013 - <?php echo date('Y'); ?> &middot; <?php bloginfo( 'name' ); ?> &middot; Developed by <a href="http://www.dracoturtur.com">Dracoturtur London</a></p>
+        </div>
 
         <!------------------------------------------------- 
         Bootstrap core JavaScript
