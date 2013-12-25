@@ -44,8 +44,8 @@
 	body {
 		margin: 0;
 		background-image: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png");
-		background-repeat:repeat;
-		display: compact;
+		background-size: cover;
+        background-repeat: no-repeat;
 	}
 	</style>
 </head>

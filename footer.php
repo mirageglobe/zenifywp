@@ -7,7 +7,7 @@
 							<?php // bones_footer_links(); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; 1997 - <?php echo date('Y'); ?> &middot; <?php bloginfo( 'name' ); ?> &middot; </p>
+					<p class="source-org copyright">&copy; 2013 - <?php echo date('Y'); ?> &middot; <?php bloginfo( 'name' ); ?> &middot; </p>
 
 				</div>
 
