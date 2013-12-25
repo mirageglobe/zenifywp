@@ -52,24 +52,6 @@
 
 <body <?php body_class(); ?>>
 
-<header class="header" role="banner">
-
-	<div id="inner-header" class="wrap clearfix">
-
-		<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-		<!--p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php //bloginfo('name'); ?></a></p-->
-
-		<?php // if you'd like to use the site description you can un-comment it below ?>
-		<?php // bloginfo('description'); ?>
-
-		<nav role="navigation">
-			<?php //bones_main_nav_bootstrap(); ?>
-		</nav>
-
-	</div>
-
-</header>
-
 <br>
 <a id="top"></a> 
 <!--Anchor top tag-->
