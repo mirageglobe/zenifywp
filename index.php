@@ -39,14 +39,16 @@
 						</a>
 					</div>
 					<?php } ?>
-
+                    <br>
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-                        <?php if(!is_front_page()){ ?>
 						<header class="article-header">
-							<h2><?php the_title(); ?></h2>
+							<h3>
+                                <?php the_title(); ?>
+                                <small><?php echo get_the_date();?></small>
+                            </h3>
 						</header>
-                        <?php } ?>
+                        
 						<section class="entry-content clearfix" itemprop="articleBody">
 							<?php the_content(); ?>
 						</section>
@@ -74,8 +76,10 @@
 					</article>
 
 					<?php endif; ?>
-
-					<a href="#top" class="btn btn-primary" role="button">Return to Top</a>
+                    
+                    <div class="pull-right">
+					   <a href="#top" class="btn btn-primary" role="button"><i class="fa fa-arrow-circle-up"></i> Return to Top</a>
+                    </div>
 				</div>
 			</div>
 		</div>
