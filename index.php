@@ -64,7 +64,7 @@
                                 <i class="fa fa-ellipsis-h"></i>
                                 <i class="fa fa-ellipsis-h"></i> 
                                 <a href="#top"><i class="fa fa-arrow-circle-o-up"></i> Top</a>
-                                <a class="" href="href="<?php echo home_url(); ?>"><i class="fa fa-home"></i> Home</a>
+                                <a class="" href="<?php echo home_url(); ?>"><i class="fa fa-home"></i> Home</a>
                             </div>
                             <br>
 						</footer>
