@@ -26,8 +26,9 @@ Special Thanks to:
 
 License
 ------------------------------------------------
-
+License:    Attribution 4.0 International (CC BY 4.0)
+URI:        http://creativecommons.org/licenses/by/4.0/deed.en_US
 
 Change Log
 ------------------------------------------------
-v1.0
+Read the Git
