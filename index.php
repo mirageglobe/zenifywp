@@ -19,13 +19,13 @@
 							<div class="item active">
 							  	<img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
 							  	<div class="carousel-caption">
-							    	gmagarwood
+							    	bone theme
 							  	</div>
 							</div>
 							<div class="item">
 							  	<img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
 							  	<div class="carousel-caption">
-							    	gmagarwood
+							    	bone theme
 							  	</div>
 							</div>
 						</div>
