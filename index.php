@@ -41,20 +41,32 @@
 					<?php } ?>
                     <br>
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<header class="article-header">
-							<h3>
-                                <?php the_title(); ?>
-                                <small><?php echo get_the_date();?></small>
-                            </h3>
+							<a href="<?php echo esc_url(get_permalink());?>">
+                                <h3>
+                                    <?php the_title(); ?>
+                                </h3>
+                            </a>
+                            <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
+                            <small><i class="fa fa-user"></i> <?php echo get_the_author();?></small>
+                            <br><br>
 						</header>
-                        
+                                          
 						<section class="entry-content clearfix" itemprop="articleBody">
 							<?php the_content(); ?>
 						</section>
 
 						<footer class="article-footer">
 							<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
+                            <div class="pull-right">
+                                <i class="fa fa-ellipsis-h"></i>
+                                <i class="fa fa-ellipsis-h"></i>
+                                <i class="fa fa-ellipsis-h"></i> 
+                                <a href="#top"><i class="fa fa-arrow-circle-o-up"></i> Top</a>
+                                <a class="" href="href="<?php echo home_url(); ?>"><i class="fa fa-home"></i> Home</a>
+                            </div>
+                            <br>
 						</footer>
 
 						<?php // comments_template(); ?>
@@ -76,10 +88,6 @@
 					</article>
 
 					<?php endif; ?>
-                    
-                    <div class="pull-right">
-					   <a href="#top" class="btn btn-primary" role="button"><i class="fa fa-arrow-circle-up"></i> Return to Top</a>
-                    </div>
 				</div>
 			</div>
 		</div>
