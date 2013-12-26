@@ -54,7 +54,7 @@
 						</header>
                                           
 						<section class="entry-content clearfix" itemprop="articleBody">
-							<?php the_content(); ?>
+							<?php the_excerpt();?>
 						</section>
 
 						<footer class="article-footer">
