@@ -42,10 +42,11 @@
     
 	<style type="text/css">
 	body {
-		margin: 0;
+		padding-top: 20px;
+        background: transparent;
         }
     html{
-        background: url(<?php echo get_template_directory_uri(); ?>/library/images/background.png) no-repeat center center fixed;
+        background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
