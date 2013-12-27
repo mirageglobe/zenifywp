@@ -31,7 +31,7 @@
                                 <a href="#top"><i class="fa fa-arrow-circle-o-up"></i> Top</a>
                                 <a class="" href="<?php echo home_url(); ?>"><i class="fa fa-home"></i> Home</a>
                             </div>
-                            <br>
+                            <br><br>
 				            <?php comments_template(); ?>
 						</footer>
 
