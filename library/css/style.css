@@ -1,0 +1,27 @@
+/*
+Fixes img and video content width. also fixes image align
+*/
+
+.entry-content img{margin:0 0 1.5em 0;max-width:100%;height:auto}
+.entry-content video,.entry-content object{max-width:100%;height:auto}
+img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both}
+
+/*
+Fixes gallery to display 5 in a column
+*/
+
+.gallery {
+   margin: auto;
+}
+.gallery-item {
+   float: left;
+   margin-top: 10px;
+   text-align: center;
+   width: 20%;
+}
+.gallery img {
+   border: 2px solid #cfcfcf;
+}
+.gallery-caption {
+   margin-left: 0;
+}
