@@ -42,7 +42,8 @@
 					<?php endif; ?>
                     
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" class="article" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+                        <p>test</p>
 						<header class="article-header">
 							<a href="<?php echo esc_url(get_permalink());?>">
                                 <h3>
@@ -69,11 +70,8 @@
 						<footer class="article-footer">
 							<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
                             <div class="pull-right">
-                                <i class="fa fa-ellipsis-h"></i>
-                                <i class="fa fa-ellipsis-h"></i>
-                                <i class="fa fa-ellipsis-h"></i> 
-                                <a href="#top"><i class="fa fa-arrow-circle-o-up"></i> Top</a>
-                                <a class="" href="<?php echo home_url(); ?>"><i class="fa fa-home"></i> Home</a>
+                                <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+                                <i class="fa fa-home"></i> <a href="<?php echo home_url(); ?>"> Home</a>
                             </div>
                             <br>
 						</footer>
