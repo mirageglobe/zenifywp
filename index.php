@@ -43,16 +43,17 @@
                     
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" class="article" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-                        <p>test</p>
 						<header class="article-header">
 							<a href="<?php echo esc_url(get_permalink());?>">
                                 <h3>
                                     <?php the_title(); ?>
                                 </h3>
                             </a>
-                            <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
-                            <small><i class="fa fa-user"></i> <?php echo get_the_author();?></small>
-                            <br><br>
+                            <?php if (!is_page()): ?> 
+                                <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
+                                <br>
+                            <?php endif; ?>
+                            <br>
 						</header>
                                           
 						<section class="entry-content clearfix" itemprop="articleBody">
@@ -93,6 +94,19 @@
 					</article>
 
 					<?php endif; ?>
+                    
+                    <?php if (!is_page()): ?> 
+                    <hr>
+                    <div class="article-footer-nav">
+                        <div class="pull-left">
+                            <?php next_posts_link( '<i class="fa fa-arrow-circle-o-left"></i> Older Entries', $the_query->max_num_pages ); ?>
+                        </div>
+                        <div class="pull-right">
+                            
+                            <?php previous_posts_link( '<i class="fa fa-arrow-circle-o-right"></i> Newer Entries' ); ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
 				</div>
 			</div>
 		</div>

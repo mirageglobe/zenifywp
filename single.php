@@ -14,7 +14,6 @@
                                 </h3>
                             </a>
                             <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
-                            <small><i class="fa fa-user"></i> <?php echo get_the_author();?></small>
                             <br><br>
 						</header>
                                           
@@ -23,17 +22,26 @@
 						</section>
 
 						<footer class="article-footer">
-							<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
                             <div class="pull-right">
-                                <?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '<i class="fa fa-arrow-circle-o-left"></i>', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?>
-                                <?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '<i class="fa fa-arrow-circle-o-right"></i>', 'Next post link', 'twentytwelve' ) . '</span>' ); ?>
-                                <i class="fa fa-ellipsis-h"></i> 
-                                <a href="#top"><i class="fa fa-arrow-circle-o-up"></i> Top</a>
-                                <a class="" href="<?php echo home_url(); ?>"><i class="fa fa-home"></i> Home</a>
+                                <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+                                <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
+                                <i class="fa fa-user"></i> <?php echo get_the_author();?>
+                            </div>
+                            <br>
+                            <hr>
+                            <div class="article-footer-nav">
+                                <div class="pull-left">
+                                    <?php previous_post_link( '<i class="fa fa-arrow-circle-o-left"></i> Previous: %link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?>
+                                </div>
+                                <div class="pull-right">
+                                    <?php next_post_link( '<i class="fa fa-arrow-circle-o-right"></i> Next: %link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '</span>' ); ?>
+                                </div>
                             </div>
                             <br><br>
 				            <?php comments_template(); ?>
 						</footer>
+                        
+
 
 					</article>
 
@@ -52,6 +60,7 @@
 					</article>
 
 					<?php endif; ?>
+                    
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 		<div class="container">
-            <p class="source-org copyright">&copy; 2013 - <?php echo date('Y'); ?> &middot; <?php bloginfo( 'name' ); ?> &middot; Developed by <a href="http://www.dracoturtur.com">Dracoturtur London</a></p>
+            <p class="source-org copyright">&copy; 2013 - <?php echo date('Y'); ?> &middot; <i class="fa fa-home"></i> <?php bloginfo( 'name' ); ?> &middot; <i class="fa fa-globe"></i> Developed by <a href="http://www.dracoturtur.com">Dracoturtur London</a></p>
         </div>
 
         <!------------------------------------------------- 

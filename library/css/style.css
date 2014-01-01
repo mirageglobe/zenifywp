@@ -7,8 +7,9 @@ Fixes img and video content width. also fixes image align
 img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both}
 
 .article-header a:hover{text-decoration:none;}
+.article-footer-nav a:hover{text-decoration:none;}
 
-.current_page_item a{color:yellow;}
+.current_page_item {color:yellow;}
 
 /*
 Fixes gallery to display 5 in a column
