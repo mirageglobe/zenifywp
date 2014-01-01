@@ -1,5 +1,17 @@
 		<div class="container">
-            <p class="source-org copyright">&copy; 2013 - <?php echo date('Y'); ?> &middot; <i class="fa fa-home"></i> <?php bloginfo( 'name' ); ?> &middot; <i class="fa fa-globe"></i> Developed by <a href="http://www.dracoturtur.com">Dracoturtur London</a></p>
+            <div class="pull-left">
+                <p class="source-org copyright">
+                    &copy; 2013 - <?php echo date('Y'); ?> 
+                    &middot; <i class="fa fa-home"></i> <?php bloginfo( 'name' ); ?> 
+                    &middot; <i class="fa fa-globe"></i> Developed by <a href="http://www.dracoturtur.com">Dracoturtur London</a>
+                </p>
+            </div>
+            <div class="pull-right">
+                <p>
+                    <i class="fa fa-cog "></i> <a href="wp-admin">Admin</a>
+                    &middot; <i class="fa fa-rss "></i> <a href="feed">RSS Feed</a>
+                </p>
+            </div>
         </div>
 
         <!------------------------------------------------- 
