@@ -1,71 +1,84 @@
 <?php get_header(); ?>
 
-			<div id="content">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+                    <h1><i class="fa fa-search"></i> Search Results: <?php echo esc_attr(get_search_query()); ?></h1>
+                    <p><?php get_search_form(); ?></p>
+                    <hr>
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<article id="post-<?php the_ID(); ?>" class="article" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<header class="article-header">
+							<a href="<?php echo esc_url(get_permalink());?>">
+                                <h3>
+                                    <?php the_title(); ?>
+                                </h3>
+                            </a>
+                            <?php if (!is_page()): ?> 
+                                <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
+                                <br>
+                            <?php endif; ?>
+                            <br>
+						</header>
+                                          
+						<section class="entry-content clearfix" itemprop="articleBody">
+							<?php 
+                                // this fixes display as page points to this file.
+                                // it should be full article, not excerpt <read more>
+                                if(is_page()):
+                                    the_content();
+                                else:
+                                    the_excerpt();
+                                endif;
+                            ?>
+						</section>
 
-				<div id="inner-content" class="wrap clearfix">
+						<footer class="article-footer">
+							<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
+                            <div class="pull-right">
+                                <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+                                <i class="fa fa-home"></i> <a href="<?php echo home_url(); ?>"> Home</a>
+                            </div>
+                            <br>
+						</footer>
 
-					<div id="main" class="eightcol first clearfix" role="main">
-						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+					</article>
 
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php endwhile; else : ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+					<article id="post-not-found" class="hentry clearfix">
+						<header class="article-header">
+							<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+						</header>
+						<section class="entry-content">
+							<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+						</section>
+						<footer class="article-footer">
+							<p><?php _e( 'This is the error message in the page.php template.', 'bonestheme' ); ?></p>
+						</footer>
+					</article>
 
-								<header class="article-header">
-
-									<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), bones_get_the_author_posts_link(), get_the_category_list(', ') );
-									?></p>
-
-								</header>
-
-								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
-
-								</section>
-
-								<footer class="article-footer">
-
-								</footer>
-
-							</article>
-
-						<?php endwhile; ?>
-
-								<?php if (function_exists('bones_page_navi')) { ?>
-										<?php bones_page_navi(); ?>
-								<?php } else { ?>
-										<nav class="wp-prev-next">
-												<ul class="clearfix">
-													<li class="prev-link"><?php next_posts_link( __( '&laquo; Older Entries', 'bonestheme' )) ?></li>
-													<li class="next-link"><?php previous_posts_link( __( 'Newer Entries &raquo;', 'bonestheme' )) ?></li>
-												</ul>
-										</nav>
-								<?php } ?>
-
-							<?php else : ?>
-
-									<article id="post-not-found" class="hentry clearfix">
-										<header class="article-header">
-											<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
-						</div>
-
-							<?php get_sidebar(); ?>
-
-					</div>
-
+					<?php endif; ?>
+                    
+                    <?php if (!is_page()): ?> 
+                    <hr>
+                    <div class="article-footer-nav">
+                        <div class="pull-left">
+                            <?php next_posts_link( '<i class="fa fa-arrow-circle-o-left"></i> Older Entries', $the_query->max_num_pages ); ?>
+                        </div>
+                        <div class="pull-right">
+                            
+                            <?php previous_posts_link( '<i class="fa fa-arrow-circle-o-right"></i> Newer Entries' ); ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+				</div>
 			</div>
+		</div>
+	</div>
+</div>
+
 
 <?php get_footer(); ?>
