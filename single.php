@@ -9,9 +9,9 @@
 					<article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<header class="article-header">
 							<a href="<?php echo esc_url(get_permalink());?>">
-                                <h3>
+                                <div class="h3">                                
                                     <?php the_title(); ?>
-                                </h3>
+                                </div>
                             </a>
                             <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
                             <br><br>

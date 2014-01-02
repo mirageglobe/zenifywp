@@ -40,20 +40,31 @@
 					</div>
                     <br>
 					<?php endif; ?>
-                    
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" class="article" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<header class="article-header">
-							<a href="<?php echo esc_url(get_permalink());?>">
-                                <h3>
-                                    <?php the_title(); ?>
-                                </h3>
-                            </a>
-                            <?php if (!is_page()): ?> 
-                                <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
+                            <?php if (is_front_page () && (get_post_type()=='page')): ?>
+                                <!-- if this is front page -->
+                                <br><br>
+                            <?php elseif (is_front_page () && (get_post_type()=='post')): ?>
+                                <!-- if this is front posts -->
                                 <br>
+                                <a href="<?php echo esc_url(get_permalink());?>">
+                                <div class="h4">                                
+                                    <?php the_title(); ?>
+                                </div>
+                                </a>
+                                <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
+                                <br><br>
+                            <?php else: ?>
+                                <!-- if this is sub page -->
+                                <a href="<?php echo esc_url(get_permalink());?>">
+                                <div class="h3">                                
+                                    <?php the_title(); ?>
+                                    <hr>
+                                </div>
+                                </a>
                             <?php endif; ?>
-                            <br>
 						</header>
                                           
 						<section class="entry-content clearfix" itemprop="articleBody">
