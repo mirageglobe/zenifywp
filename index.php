@@ -45,10 +45,8 @@
 						<header class="article-header">
                             <?php if (is_front_page () && (get_post_type()=='page')): ?>
                                 <!-- if this is front page -->
-                                <br>
                             <?php elseif (is_front_page () && (get_post_type()=='post')): ?>
                                 <!-- if this is front posts -->
-                                <br>
                                 <a href="<?php echo esc_url(get_permalink());?>">
                                 <div class="h4">                                
                                     <?php the_title(); ?>
