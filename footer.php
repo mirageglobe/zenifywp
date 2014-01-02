@@ -8,7 +8,7 @@
             </div>
             <div class="pull-right">
                 <p>
-                    <i class="fa fa-cog "></i> <a href="wp-admin">Admin</a>
+                    <i class="fa fa-cog "></i> <a href="<?php echo home_url(); ?>/wp-admin">Admin</a>
                     &middot; <i class="fa fa-rss "></i> <a href="feed">RSS Feed</a>
                 </p>
             </div>
