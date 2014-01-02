@@ -30,10 +30,6 @@
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-	<?php // wordpress head functions ?>
-	<?php wp_head(); ?>
-	<?php // end of wordpress head ?>
-
 	<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -53,6 +49,10 @@
         background-size: cover;
 	   }
 	</style>
+
+    <?php // wordpress head functions ?>
+	<?php wp_head(); ?>
+	<?php // end of wordpress head ?>
 </head>
 
 <body <?php body_class(); ?>>
