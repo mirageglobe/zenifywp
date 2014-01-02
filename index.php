@@ -45,7 +45,7 @@
 						<header class="article-header">
                             <?php if (is_front_page () && (get_post_type()=='page')): ?>
                                 <!-- if this is front page -->
-                                <br><br>
+                                <br>
                             <?php elseif (is_front_page () && (get_post_type()=='post')): ?>
                                 <!-- if this is front posts -->
                                 <br>
