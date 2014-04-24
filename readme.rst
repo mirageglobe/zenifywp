@@ -40,22 +40,28 @@ Features
 
 License
 ------------------------------------------------
-License:    Attribution 4.0 International (CC BY 4.0)
+License: Attribution 4.0 International (CC BY 4.0)
 
 http://creativecommons.org/licenses/by/4.0/deed.en_US
 
 In short, you are free to use commercially and personally.
 
-Road Map
+Guidelines and Road Map
 ------------------------------------------------
 
 This project has some primary goals and guidelines:
+
+Guidelines
 
 - Minimal number of files (php settings etc)
 - Use CDN (Content Delivery network) when possible to reduce hosted repos
 - Mobile responsive enabling
 - Follow Bootstrap guidelines
 - Clean UX/UI (Try to; although this is subjective)
+
+Roadmap
+
+- Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
 
 Change Log
 ------------------------------------------------
