@@ -19,13 +19,17 @@
 							<div class="item active">
 							  	<img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
 							  	<div class="carousel-caption">
-							    	bone theme
+							    	<?php bloginfo( 'name' ); ?>
+                    <br>
+							    	<small>Bone Theme</small>
 							  	</div>
 							</div>
 							<div class="item">
-							  	<img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
+							  	<img src="<?php echo get_template_directory_uri(); ?>/library/images/splash02.png" alt="bone">
 							  	<div class="carousel-caption">
-							    	bone theme
+                    <?php bloginfo( 'name' ); ?>
+                    <br>
+							    	<small>Public domain images - www.public-domain-image.com</small>
 							  	</div>
 							</div>
 						</div>
@@ -38,52 +42,53 @@
 							<span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
-                    <br>
+          <br>
 					<?php endif; ?>
-                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          
+          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" class="article" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<header class="article-header">
-                            <?php if (is_front_page () && (get_post_type()=='page')): ?>
-                                <!-- if this is front page -->
-                            <?php elseif (is_front_page () && (get_post_type()=='post')): ?>
-                                <!-- if this is front posts -->
-                                <a href="<?php echo esc_url(get_permalink());?>">
-                                <div class="h4">                                
-                                    <?php the_title(); ?>
-                                </div>
-                                </a>
-                                <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
-                                <br><br>
-                            <?php else: ?>
-                                <!-- if this is sub page -->
-                                <a href="<?php echo esc_url(get_permalink());?>">
-                                <div class="h3">                                
-                                    <?php the_title(); ?>
-                                    <hr>
-                                </div>
-                                </a>
-                            <?php endif; ?>
+              <?php if (is_front_page () && (get_post_type()=='page')): ?>
+                <!-- if this is front page -->
+              <?php elseif (is_front_page () && (get_post_type()=='post')): ?>
+                <!-- if this is front posts -->
+                <a href="<?php echo esc_url(get_permalink());?>">
+                <div class="h4">                                
+                  <?php the_title(); ?>
+                </div>
+                </a>
+                <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
+                <br><br>
+              <?php else: ?>
+                <!-- if this is sub page -->
+                <a href="<?php echo esc_url(get_permalink());?>">
+                <div class="h3">                                
+                  <?php the_title(); ?>
+                  <hr>
+                </div>
+                </a>
+              <?php endif; ?>
 						</header>
                                           
 						<section class="entry-content clearfix" itemprop="articleBody">
 							<?php 
-                                // this fixes display as page points to this file.
-                                // it should be full article, not excerpt <read more>
-                                if(is_page()):
-                                    the_content();
-                                else:
-                                    the_excerpt();
-                                endif;
-                            ?>
+              // this fixes display as page points to this file.
+              // it should be full article, not excerpt <read more>
+              if(is_page()):
+                the_content();
+              else:
+                the_excerpt();
+              endif;
+              ?>
 						</section>
 
 						<footer class="article-footer">
 							<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
-                            <div class="pull-right">
-                                <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
-                                <i class="fa fa-home"></i> <a href="<?php echo home_url(); ?>"> Home</a>
-                            </div>
-                            <br>
+              <div class="pull-right">
+                <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+                <i class="fa fa-home"></i> <a href="<?php echo home_url(); ?>"> Home</a>
+              </div>
+              <br>
 						</footer>
 
 					</article>
@@ -104,18 +109,18 @@
 
 					<?php endif; ?>
                     
-                    <?php if (!is_page()): ?> 
-                    <hr>
-                    <div class="article-footer-nav">
-                        <div class="pull-left">
-                            <?php next_posts_link( '<i class="fa fa-arrow-circle-o-left"></i> Older Entries', $the_query->max_num_pages ); ?>
-                        </div>
-                        <div class="pull-right">
-                            
-                            <?php previous_posts_link( '<i class="fa fa-arrow-circle-o-right"></i> Newer Entries' ); ?>
-                        </div>
-                    </div>
-                    <?php endif; ?>
+          <?php if (!is_page()): ?> 
+          <hr>
+          <div class="article-footer-nav">
+            <div class="pull-left">
+              <?php next_posts_link( '<i class="fa fa-arrow-circle-o-left"></i> Older Entries', $the_query->max_num_pages ); ?>
+            </div>
+            <div class="pull-right">
+              <?php previous_posts_link( '<i class="fa fa-arrow-circle-o-right"></i> Newer Entries' ); ?>
+            </div>
+          </div>
+          <?php endif; ?>
+          
 				</div>
 			</div>
 		</div>
