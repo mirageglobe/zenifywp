@@ -5,11 +5,11 @@
 		<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-body">
-                    <section class="search">
-                        <h1>Page does not exist <small>404 Error</small></h1>
-                        <p>The page request is not found. Try searching for this.</p>
-                        <p><?php get_search_form(); ?></p>
-                    </section>
+          <section class="search">
+            <h1>Page does not exist <small>404 Error</small></h1>
+            <p>The page request is not found. Try searching for this.</p>
+            <p><?php get_search_form(); ?></p>
+          </section>
 				</div>
 			</div>
 		</div>

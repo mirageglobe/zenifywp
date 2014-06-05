@@ -20,12 +20,9 @@
 
 	    <!-- Placed at the end of the document so the pages load faster -->
 
-	    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	    <script src="//cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
 	    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
 		<?php wp_footer(); ?>
-
 	</body>
-
 </html>
-
