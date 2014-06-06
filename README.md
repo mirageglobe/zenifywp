@@ -1,15 +1,12 @@
-================================================
 Bone by Jimmy MG Lim
 ================================================
 
 Background
 ------------------------------------------------
-Author:     Jimmy MG Lim (mirageglobe@gmail.com)
-Twitter:    @mirageglobe
-Website:    http://www.mirageglobe.com
-Company:    http://www.dracoturtur.com
-Bitbucket:	https://bitbucket.org/mirageglobe/bone (Source)
-
+- Author: Jimmy MG Lim (mirageglobe@gmail.com), Twitter: @mirageglobe, Url: http://www.mirageglobe.com
+- Company: http://www.dracoturtur.com
+- Source: https://github.com/mirageglobe/bone
+- License: Apache License 2.0
 
 Bone is designed to make the life of developers easier. It's built using HTML5 with responsive bootstrap (with bootstrap normalise included). It was updated using some of the HTML5 Boilerplate's recommended markup and setup. It is constantly growing so be sure to check back often if you are a frequent user. It now includes fontawesome, bootstrap, jquery by default. It has a carousel which you can disable.
 
@@ -21,14 +18,9 @@ Special Thanks to:
 - Paul Irish & the HTML5 Boilerplate
 - and several other developers
 
-License
-------------------------------------------------
-Apache License 2.0
-
 
 Features
 ------------------------------------------------
-
 - Includes Bootstrap 3.x (via CDN)
 - Includes FontAwesome 4.x (via CDN)
 - Includes Bootstrap themes support
@@ -38,9 +30,9 @@ Features
 - RSS Feed supported
 - Simple login button
 
+
 Guidelines and Road Map
 ------------------------------------------------
-
 This project has some primary goals and guidelines:
 
 Guidelines
@@ -54,6 +46,7 @@ Guidelines
 Roadmap
 
 - Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
+
 
 Change Log
 ------------------------------------------------
