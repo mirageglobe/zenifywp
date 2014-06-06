@@ -1,4 +1,4 @@
-Bone by Jimmy MG Lim
+Bone
 ================================================
 
 Background
