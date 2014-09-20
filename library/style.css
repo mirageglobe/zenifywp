@@ -1,4 +1,22 @@
 /*
+General hip visuals
+*/
+
+body {
+  padding-top: 20px;
+  background: transparent;
+}
+
+html {
+  background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/*
 Fixes img and video content width. also fixes image align
 */
 
@@ -16,17 +34,17 @@ Fixes gallery to display 5 in a column
 */
 
 .gallery {
-   margin: auto;
+  margin: auto;
 }
 .gallery-item {
-   float: left;
-   margin-top: 10px;
-   text-align: center;
-   width: 20%;
+  float: left;
+  margin-top: 10px;
+  text-align: center;
+  width: 20%;
 }
 .gallery img {
-   border: 2px solid #cfcfcf;
+  border: 2px solid #cfcfcf;
 }
 .gallery-caption {
-   margin-left: 0;
+  margin-left: 0;
 }

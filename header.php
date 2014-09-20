@@ -37,17 +37,6 @@
   <link href="//cdn.jsdelivr.net/bootswatch/3.2.0.1/spacelab/bootstrap.min.css" rel="stylesheet">
     
 	<style type="text/css">
-	body {
-		padding-top: 20px;
-      background: transparent;
-      }
-    html {
-      background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-	   }
 	</style>
 
   <!-- // wordpress head functions -->

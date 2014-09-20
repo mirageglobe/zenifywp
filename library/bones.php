@@ -1,20 +1,7 @@
 <?php
-/* Welcome to Bones :)
-This is the core Bones file where most of the
-main functions & features reside. If you have
-any custom functions, it's best to put them
-in the functions.php file.
-
-Developed by: Eddie Machado
-URL: http://themble.com/bones/
+/*
+If you have any custom functions, it's best to put them in the functions.php file.
 */
-
-/*********************
-LAUNCH BONES
-Let's fire off all the functions
-and tools. I put it up here so it's
-right up top and clean.
-*********************/
 
 // we're firing all out initial functions at the start
 add_action( 'after_setup_theme', 'bones_ahoy', 16 );
@@ -151,13 +138,13 @@ function bones_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
-	set_post_thumbnail_size(125, 125, true);
+	set_post_thumbnail_size(150, 150, true);
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
 		array(
 		'default-image' => '',  // background image default
-		'default-color' => '', // background color default (dont add the #)
+		'default-color' => '',  // background color default (dont add the #)
 		'wp-head-callback' => '_custom_background_cb',
 		'admin-head-callback' => '',
 		'admin-preview-callback' => ''
