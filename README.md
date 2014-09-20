@@ -41,7 +41,7 @@ Guidelines
 - Use CDN (Content Delivery network) when possible to reduce hosted repos
 - Mobile responsive enabling
 - Follow Bootstrap guidelines
-- Clean UX/UI (Try to; although this is subjective)
+- Simple and Clean UX/UI (Try to; although this is subjective; rule of thumb is if something is not essential, remove it)
 
 Roadmap
 

@@ -124,6 +124,5 @@ function custom_post_example() {
 		check out this fantastic tool:
 		https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress
 	*/
-	
 
 ?>
