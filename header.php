@@ -30,11 +30,11 @@
 
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-  <link href="//cdn.jsdelivr.net/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//cdn.jsdelivr.net/bootstrap/3.1.1/css/bootstrap-theme.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link href="//cdn.jsdelivr.net/bootswatch/3.1.1.1/spacelab/bootstrap.min.css" rel="stylesheet">
+  <link href="//cdn.jsdelivr.net/bootswatch/3.2.0.1/spacelab/bootstrap.min.css" rel="stylesheet">
     
 	<style type="text/css">
 	body {
