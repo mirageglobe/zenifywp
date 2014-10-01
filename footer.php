@@ -1,15 +1,17 @@
 		<div class="container">
       <div class="pull-left">
-        <p class="source-org copyright">
+        <p class="h5 source-org copyright">
           &copy; <?php echo date('Y'); ?> 
           &middot; <i class="fa fa-home"></i> <?php bloginfo( 'name' ); ?>  &middot; <br>
-          <small><i class="fa fa-globe"></i> powered by <a href="https://github.com/mirageglobe/bone">Bone Theme</a>, created by <a href="http://www.dracoturtur.com">Dracoturtur</a></small>
+          <small><i class="fa fa-globe"></i> powered by <a href="https://github.com/mirageglobe/bone">Bone Theme</a>, from <a href="http://www.dracoturtur.com">Dracoturtur.com</a></small>
         </p>
       </div>
       <div class="pull-right">
-        <p>
-          <i class="fa fa-cog "></i> <a href="<?php echo home_url(); ?>/wp-admin">Admin</a>
-          &middot; <i class="fa fa-rss "></i> <a href="feed">RSS Feed</a>
+        <p class="h5">
+          <small>
+            <i class="fa fa-cog "></i> <a href="<?php echo home_url(); ?>/wp-admin">Admin</a>
+            &middot; <i class="fa fa-rss "></i> <a href="feed">RSS Feed</a>
+          </small>
         </p>
       </div>
     </div>

@@ -15,7 +15,11 @@ html {
   background-size: cover;
 }
 
-
+p{
+  font-size: 20px;
+  color: #333;
+  font-family: sans-serif;
+}
 /*
 Fixes img and video content width. also fixes image align
 */
