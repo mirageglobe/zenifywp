@@ -22,8 +22,6 @@
 							  	<img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
 							  	<div class="carousel-caption">
 							    	<?php bloginfo( 'name' ); ?>
-                    <br>
-							    	<small>Bone Theme</small>
 							  	</div>
 							</div>
 							<div class="item">
