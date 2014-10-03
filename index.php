@@ -56,7 +56,7 @@
               <!-- if this is front posts -->
               
                 <a href="<?php echo esc_url(get_permalink());?>">
-                <div class="h4">                                
+                <div class="h2">                                
                   <?php the_title(); ?>
                 </div>
                 </a>
@@ -67,7 +67,7 @@
               
                 <!-- if this is sub page -->
                 <a href="<?php echo esc_url(get_permalink());?>">
-                <div class="h3">      
+                <div class="h2">      
                   
                   <?php the_title(); ?>
                   

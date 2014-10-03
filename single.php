@@ -11,18 +11,20 @@
           <article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<header class="article-header">
 							<a href="<?php echo esc_url(get_permalink());?>">
-                  <div class="h3">   
-                    
-                      <?php the_title(); ?>
-                    
-                  </div>
+                <div class="h2">       
+                  
+                  <?php the_title(); ?>
+                  
+                </div>
               </a>
               <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
               <br><br>
 						</header>
                                           
 						<section class="entry-content clearfix" itemprop="articleBody">
+              
 							<?php the_content(); ?>
+              
 						</section>
 
 						<footer class="article-footer">
