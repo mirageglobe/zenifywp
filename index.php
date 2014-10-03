@@ -28,8 +28,6 @@
 							  	<img src="<?php echo get_template_directory_uri(); ?>/library/images/splash02.png" alt="bone">
 							  	<div class="carousel-caption">
                     <?php bloginfo( 'name' ); ?>
-                    <br>
-							    	<small>Public domain images - www.public-domain-image.com</small>
 							  	</div>
 							</div>
 						</div>
