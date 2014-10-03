@@ -15,7 +15,7 @@ html {
   background-size: cover;
 }
 
-h1,h2,h3,h4,h5,h6,p{
+h1,h2,h3,h4,h5,h6,p,ul,ol,li{
   color: #333;
   font-family: 'Open Sans', sans-serif;
 }
