@@ -4,7 +4,8 @@ General hip visuals
 
 body {
   padding-top: 20px;
-  background: transparent;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 html {
@@ -55,4 +56,12 @@ Fixes gallery to display 5 in a column
 }
 .gallery-caption {
   margin-left: 0;
+}
+
+/*
+Customisation
+*/
+
+.bggrey {
+  background-color: #EEE;
 }

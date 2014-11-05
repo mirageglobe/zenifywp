@@ -8,15 +8,9 @@ Background
 - Source: https://github.com/mirageglobe/bone
 - License: Apache License 2.0
 
-Bone is designed to make the life of developers easier. It's built using HTML5 with responsive bootstrap (with bootstrap normalise included). It was updated using some of the HTML5 Boilerplate's recommended markup and setup. It is constantly growing so be sure to check back often if you are a frequent user. It now includes fontawesome, bootstrap, jquery by default. It has a carousel which you can disable.
+Bone is designed to make the life of developers easier. It's built using HTML5 with responsive bootstrap (with bootstrap normalise included). It was updated using some of the HTML5 Boilerplate's recommended markup and setup. It now includes fontawesome, bootstrap, jquery by default. It has a carousel which you can disable.
 
 Bone is partially based on Bones by Eddie Machado http://themble.com/bones
-
-Special Thanks to:
-
-- Eddie Machado
-- Paul Irish & the HTML5 Boilerplate
-- and several other developers
 
 
 Features
@@ -46,6 +40,7 @@ Guidelines
 Roadmap
 
 - Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
+- Activate search tool
 
 
 Change Log

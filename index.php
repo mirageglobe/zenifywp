@@ -19,7 +19,7 @@
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner">
 							<div class="item active">
-							  	<img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
+							   <img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
 							  	<div class="carousel-caption">
 							    	<?php bloginfo( 'name' ); ?>
 							  	</div>
@@ -61,7 +61,6 @@
                 </div>
                 </a>
                 <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
-                <br><br>
               
               <?php else: ?>
               
@@ -87,18 +86,18 @@
               if(is_page()):
                 the_content();
               else:
-                the_excerpt();
+                //the_excerpt();
               endif;
               ?>
               
 						</section>
 
 						<footer class="article-footer">
-							<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
-              <div class="pull-right">
+							<?php //the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
+              <!--<div class="pull-right">
                 <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
                 <i class="fa fa-home"></i> <a href="<?php echo home_url(); ?>"> Home</a>
-              </div>
+              </div>-->
               <br>
 						</footer>
 
