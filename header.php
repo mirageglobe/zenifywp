@@ -63,7 +63,9 @@
           </button>
 
           <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="nofollow">
-            <img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" class="img-rounded" alt="Responsive image" width="25px"> <?php bloginfo( 'name' ); ?></a>
+            <img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" class="img-rounded" alt="Responsive image" width="25px"> <?php bloginfo( 'name' ); ?>
+          </a>
+          
         </div>
 
         <div class="collapse navbar-collapse" id="bsnavbar-collapse">
