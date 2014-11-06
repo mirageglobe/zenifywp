@@ -3,7 +3,9 @@ Bone
 
 Background
 ------------------------------------------------
-- Author: Jimmy MG Lim (mirageglobe@gmail.com), Twitter: @mirageglobe, Url: http://www.mirageglobe.com
+- Author: Jimmy MG Lim (mirageglobe@gmail.com)
+- Twitter: @mirageglobe
+- Blog: http://www.mirageglobe.com
 - Company: http://www.dracoturtur.com
 - Source: https://github.com/mirageglobe/bone
 - License: Apache License 2.0
