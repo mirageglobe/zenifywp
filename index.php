@@ -6,6 +6,7 @@
 		  <div class="panel-body">
        
         <?php if(is_front_page()): ?>
+        
         <div class="col-md-12"><!--Top Slider-->
            
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -42,6 +43,13 @@
           <br>
 
         </div><!--Top Slider-->
+        
+        <div class="col-md-12">
+          <div class="pull-right small">
+            <?php get_search_form(); ?>
+            <br>
+          </div>
+        </div>
         <?php endif; ?>
         
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -56,26 +64,28 @@
 
               <?php elseif (is_front_page () && (get_post_type()=='post')): ?>
               <!-- if this is front posts -->
-                <div class="col-md-8 col-md-offset-4"><!--Main Article-->
-                  <a href="<?php echo esc_url(get_permalink());?>">
-                  <div class="h2">                                
-                    <?php the_title(); ?>
-                  </div>
-                  </a>
-                  <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
-                </div>
-
-              <?php else: ?>
-
-                <!-- if this is single page -->
+              <div class="col-md-8 col-md-offset-4"><!--Main Article-->
                 <a href="<?php echo esc_url(get_permalink());?>">
-                <div class="h2">      
-
+                <div class="h2">                                
                   <?php the_title(); ?>
-
-                  <hr>
                 </div>
                 </a>
+                <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
+              </div>
+
+              <?php else: ?>
+              <!-- if this is single page -->
+              <div class="pull-right small">
+                <?php get_search_form(); ?>
+                <br>
+              </div>
+              
+              <a href="<?php echo esc_url(get_permalink());?>">
+                <div class="h2">
+                  <?php the_title(); ?>
+                </div>
+                <hr>
+              </a>
 
               <?php endif; ?>
 
@@ -86,22 +96,39 @@
               <?php 
               // this fixes display as page points to this file.
               // it should be full article, not excerpt <read more>
-              if(is_page()):
+              if(is_singular()):
+                // is singular displays posts or pages and is single displays just posts
                 the_content();
-              else:
-                //the_excerpt();
               endif;
               ?>
 
             </section>
 
             <footer class="article-footer">
-              <?php //the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
-              <!--<div class="pull-right">
-                <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
-                <i class="fa fa-home"></i> <a href="<?php echo home_url(); ?>"> Home</a>
-              </div>-->
-              <br>
+              <?php if(is_singular()): ?>
+                <div class="pull-right">
+                  <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+                  <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
+                  <i class="fa fa-user"></i> <?php echo get_the_author();?>
+                </div>
+                <br>
+                <hr>
+                <div class="article-footer-nav">
+                  <div class="pull-left">
+
+                    <?php previous_post_link( '<i class="fa fa-arrow-circle-o-left"></i> Previous: %link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?>
+
+                  </div>
+                  <div class="pull-right">
+
+                    <?php next_post_link( '<i class="fa fa-arrow-circle-o-right"></i> Next: %link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '</span>' ); ?>
+
+                  </div>
+                </div>
+                <br><br>
+
+                <?php comments_template(); ?>
+              <?php endif; ?>
             </footer>
 
           </article>
@@ -126,22 +153,6 @@
         
         </div><!--Main Article-->
 				
-        <?php endif; ?>
-        
-        <?php if (!is_page()): ?>
-        <div class="col-md-12"><!--Lower Nav-->
-
-          <hr>
-          <div class="article-footer-nav">
-            <div class="pull-left">
-              <?php next_posts_link( '<i class="fa fa-arrow-circle-o-left"></i> Older Entries', $the_query->max_num_pages ); ?>
-            </div>
-            <div class="pull-right">
-              <?php previous_posts_link( '<i class="fa fa-arrow-circle-o-right"></i> Newer Entries' ); ?>
-            </div>
-          </div>
-
-        </div><!--Lower Nav-->
         <?php endif; ?>
           
 		  </div>

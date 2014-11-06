@@ -6,8 +6,10 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
           <h1><i class="fa fa-search"></i> Search Results: <?php echo esc_attr(get_search_query()); ?></h1>
+          
           <p><?php get_search_form(); ?></p>
           <hr>
+          
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" class="article" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<header class="article-header">
@@ -24,15 +26,7 @@
             </header>
                                           
 						<section class="entry-content clearfix" itemprop="articleBody">
-							<?php 
-                // this fixes display as page points to this file.
-                // it should be full article, not excerpt <read more>
-                if(is_page()):
-                  the_content();
-                else:
-                  the_excerpt();
-                endif;
-              ?>
+							<?php the_excerpt(); ?>
 						</section>
 
 						<footer class="article-footer">

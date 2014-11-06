@@ -54,40 +54,40 @@
 		<div class="col-md-12">
 			<nav class="navbar navbar-default" role="navigation">
 			  <!-- Brand and toggle get grouped for better mobile display -->
-			  	<div class="navbar-header">
-				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bsnavbar-collapse">
-				      <span class="sr-only">Toggle navigation</span>
-				      <span class="icon-bar"></span>
-				      <span class="icon-bar"></span>
-				      <span class="icon-bar"></span>
-				    </button>
-				    
-			    	<a class="navbar-brand" href="<?php echo home_url(); ?>" rel="nofollow">
-              <img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" class="img-rounded" alt="Responsive image" width="25px"> <?php bloginfo( 'name' ); ?></a>
-			  	</div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bsnavbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-			  	<div class="collapse navbar-collapse" id="bsnavbar-collapse">
-					<?php 
+          <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="nofollow">
+            <img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" class="img-rounded" alt="Responsive image" width="25px"> <?php bloginfo( 'name' ); ?></a>
+        </div>
 
-					$menubarpill = wp_page_menu(array(
-				    'depth'       => 0,
-						'sort_column' => 'menu_order, post_title',
-						'menu_class'  => 'menu',
-						'include'     => '',
-						'exclude'     => '',
-						'echo'        => false,
-						'show_home'   => false,
-						'link_before' => '',
-						'link_after'  => '' 
-					)); 
+        <div class="collapse navbar-collapse" id="bsnavbar-collapse">
+        <?php 
 
-					$menubarpill = str_replace('<ul>', '<ul class="nav navbar-nav navbar-right">', $menubarpill);
-					$menubarpill = str_replace("<ul class='children'>", '<ul class="dropdown-menu">', $menubarpill);
+        $menubarpill = wp_page_menu(array(
+          'depth'       => 0,
+          'sort_column' => 'menu_order, post_title',
+          'menu_class'  => 'menu',
+          'include'     => '',
+          'exclude'     => '',
+          'echo'        => false,
+          'show_home'   => false,
+          'link_before' => '',
+          'link_after'  => '' 
+        )); 
 
-					echo $menubarpill;
+        $menubarpill = str_replace('<ul>', '<ul class="nav navbar-nav navbar-right">', $menubarpill);
+        $menubarpill = str_replace("<ul class='children'>", '<ul class="dropdown-menu">', $menubarpill);
 
-					?>
-			  	</div><!-- /.navbar-collapse -->
+        echo $menubarpill;
+
+        ?>
+        </div><!-- /.navbar-collapse -->
 			</nav>
 		</div>
 	</div>

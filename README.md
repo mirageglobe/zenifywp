@@ -10,7 +10,7 @@ Background
 
 Bone is designed to make the life of developers easier. It's built using HTML5 with responsive bootstrap (with bootstrap normalise included). It was updated using some of the HTML5 Boilerplate's recommended markup and setup. It now includes fontawesome, bootstrap, jquery by default. It has a carousel which you can disable.
 
-Bone is partially based on Bones by Eddie Machado http://themble.com/bones
+Bone is inspired by Bones (Eddie Machado http://themble.com/bones)
 
 
 Features
