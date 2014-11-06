@@ -5,9 +5,15 @@
 		<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-body">
-          <h1><i class="fa fa-search"></i> Search Results: <?php echo esc_attr(get_search_query()); ?></h1>
+          <div class="col-md-12">
+            <div class="pull-right small">
+              <?php get_search_form(); ?>
+              <br>
+            </div>
+          </div>
           
-          <p><?php get_search_form(); ?></p>
+          <h1><i class="fa fa-search"></i> Results</h1>
+          
           <hr>
           
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -18,19 +24,19 @@
                   <?php the_title(); ?>
                 </h3>
               </a>
-              <?php if (!is_page()): ?> 
-                <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
-                <br>
-              <?php endif; ?>
+
+              <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
+              <br>
               <br>
             </header>
                                           
 						<section class="entry-content clearfix" itemprop="articleBody">
-							<?php the_excerpt(); ?>
+              <div class="small">
+                <?php the_excerpt(); ?>
+              </div>
 						</section>
 
 						<footer class="article-footer">
-							<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
               <div class="pull-right">
                 <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
                 <i class="fa fa-home"></i> <a href="<?php echo home_url(); ?>"> Home</a>
