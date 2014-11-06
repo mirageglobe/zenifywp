@@ -10,19 +10,21 @@ Background
 
 Bone is designed to make the life of developers easier. It's built using HTML5 with responsive bootstrap (with bootstrap normalise included). It was updated using some of the HTML5 Boilerplate's recommended markup and setup. It now includes fontawesome, bootstrap, jquery by default. It has a carousel which you can disable.
 
-Bone is inspired by Bones (Eddie Machado http://themble.com/bones)
+![Bone Screenshot](https://raw.githubusercontent.com/mirageglobe/bone/master/screenshot.png)
 
+**Inspired by Bones (Eddie Machado http://themble.com/bones)**
+**Please check out the holder page. You can use this when you are swapping over templates. https://github.com/mirageglobe/boneholderpage**
 
 Features
 ------------------------------------------------
-- Includes Bootstrap 3.x (via CDN)
-- Includes FontAwesome 4.x (via CDN)
+- Includes Bootstrap 3.2.0 via Bootswatch 3.2.0.1 (via CDN)
+- Includes FontAwesome 4.2.0 (via CDN)
 - Includes Bootstrap themes support
-- Includes Jquery 11.x (via CDN)
-- Mobile Responsive
+- Includes Jquery 2.1.1 (via CDN)
+- Mobile Responsive (First)
 - Preset gallery layout supported
 - RSS Feed supported
-- Simple login button
+- Simple admin login button
 
 
 Guidelines and Road Map
@@ -40,9 +42,4 @@ Guidelines
 Roadmap
 
 - Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
-- Activate search tool
-
-
-Change Log
-------------------------------------------------
-Read the Git change logs
+- Activate search tool (done)
