@@ -12,8 +12,8 @@ Bone is designed to make the life of developers easier. It's built using HTML5 w
 
 ![Bone Screenshot](https://raw.githubusercontent.com/mirageglobe/bone/master/screenshot.png)
 
-**Inspired by Bones (Eddie Machado http://themble.com/bones)**
-**Please check out the holder page. You can use this when you are swapping over templates. https://github.com/mirageglobe/boneholderpage**
+*Inspired by Bones (Eddie Machado http://themble.com/bones)*
+*Please check out the holder page. You can use this when you are swapping over templates. https://github.com/mirageglobe/boneholderpage*
 
 Features
 ------------------------------------------------
