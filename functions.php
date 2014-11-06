@@ -1,27 +1,11 @@
 <?php
-/*
-This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images,
-sidebars, comments, ect.
-*/
+//require_once( 'library/bones.php' ); // if you remove this, bones will break
 
-/************* INCLUDE NEEDED FILES ***************/
+add_action( 'after_setup_theme', 'bone_startup', 16 );
 
-/*
-1. library/bones.php
-	- head cleanup (remove rsd, uri links, junk css, ect)
-	- enqueueing scripts & styles
-	- theme support functions
-	- custom menu output & fallbacks
-	- related post function
-	- page-navi function
-	- removing <p> from around images
-	- customizing the post excerpt
-	- custom google+ integration
-	- adding custom fields to user profiles
-*/
-require_once( 'library/bones.php' ); // if you remove this, bones will break
-/*
+function bone_startup() {
+
+}
 
 
 /************* THUMBNAIL SIZE OPTIONS *************/
@@ -53,45 +37,77 @@ you like. Enjoy!
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
-	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'bonestheme' ),
-		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+}
+
+function register_bone_menus() {
+  
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' ),
+      'extra-menu' => __( 'Extra Menu' )
+    )
+  );
+
+}
+
+add_action( 'init', 'register_bone_menus' );
+
+
+function bone_widgets_init() {
+	
+  register_sidebar( array(
+		'name' => 'Lower Bar Col 1',
+		'id' => 'lowerbarcol1',
+		'before_widget' => '<div>',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
-
-	Just change the name to whatever your new
-	sidebar's id is, for example:
-
-	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'bonestheme' ),
-		'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+  
+  register_sidebar( array(
+		'name' => 'Lower Bar Col 2',
+		'id' => 'lowerbarcol2',
+		'before_widget' => '<div>',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+  
+  register_sidebar( array(
+		'name' => 'Lower Bar Col 3',
+		'id' => 'lowerbarcol3',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+  
+}
 
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
+add_action( 'widgets_init', 'bone_widgets_init' );
 
-	*/
-} // don't remove this bracket!
+
+function register_styles() {
+
+  if (!is_admin()) {
+
+		// register main stylesheet
+		wp_register_style( 'bone-stylesheet', get_stylesheet_directory_uri() . '/library/style.css', array(), '', 'all' );
+
+		// enqueue styles and scripts
+		wp_enqueue_style( 'bone-stylesheet' );
+
+	}
+  
+}
+
+add_action( 'wp_enqueue_scripts', 'register_styles', 999 );
+
 
 /************* COMMENT LAYOUT *********************/
 
 // Comment Layout
+
 function bones_comments( $comment, $args, $depth ) {
    $GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class(); ?>>
