@@ -21,7 +21,6 @@ Features
 ------------------------------------------------
 - Includes Bootstrap 3.2.0 via Bootswatch 3.2.0.1 (via CDN)
 - Includes FontAwesome 4.2.0 (via CDN)
-- Includes Bootstrap themes support
 - Includes Jquery 2.1.1 (via CDN)
 - Mobile Responsive (First)
 - Preset gallery layout supported
