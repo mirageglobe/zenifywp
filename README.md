@@ -1,4 +1,4 @@
-Bone
+Zenify
 ================================================
 
 Background
@@ -7,12 +7,12 @@ Background
 - Twitter: @mirageglobe
 - Blog: http://www.mirageglobe.com
 - Company: http://www.dracoturtur.com
-- Source: https://github.com/mirageglobe/bone
+- Source: https://github.com/mirageglobe/zenify
 - License: Apache License 2.0
 
-Bone is designed to make the life of developers easier. It's built using HTML5 with responsive bootstrap (with bootstrap normalise included). It was updated using some of the HTML5 Boilerplate's recommended markup and setup. It now includes fontawesome, bootstrap, jquery by default. It has a carousel which you can disable.
+Zenify is designed to make the life of developers easier. It's built using HTML5 with responsive bootstrap (with bootstrap normalise included). It was updated using some of the HTML5 Boilerplate's recommended markup and setup. It now includes fontawesome, bootstrap, jquery by default. It has a carousel which you can disable.
 
-![Bone Screenshot](https://raw.githubusercontent.com/mirageglobe/bone/master/screenshot.png)
+![Zenify Screenshot](https://raw.githubusercontent.com/mirageglobe/zenify/master/screenshot.png)
 
 *Inspired by Bones (Eddie Machado http://themble.com/bones)*
 *Please check out the holder page. You can use this when you are swapping over templates. https://github.com/mirageglobe/boneholderpage*
