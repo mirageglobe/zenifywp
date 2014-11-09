@@ -1,4 +1,4 @@
-Zenify
+Zenify Wordpress
 ================================================
 
 Background
