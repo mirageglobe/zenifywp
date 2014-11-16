@@ -7,7 +7,7 @@
             <p class="h5 source-org copyright">
               &copy; <?php echo date('Y'); ?> 
               &middot; <i class="fa fa-home"></i> <?php bloginfo( 'name' ); ?>  &middot; <br>
-              <small><i class="fa fa-globe"></i> using <a href="https://github.com/mirageglobe/bone">Bone Theme</a> from <a href="http://www.dracoturtur.com">Dracoturtur.com</a> &middot; Images from www.public-domain-image.com</small>
+              <small><i class="fa fa-globe"></i> using <a href="https://github.com/mirageglobe/zenifywordpress">Zenifywordpress Theme</a> from <a href="http://www.dracoturtur.com">Dracoturtur.com</a> &middot;</small>
             </p>
           </div>
           <div class="pull-right">
