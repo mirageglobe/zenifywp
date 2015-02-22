@@ -3,8 +3,8 @@
 <div class="container">
   <div class="panel panel-default">
     <div class="row">
-		  <div class="panel-body">
-       
+      <div class="panel-body">
+        
         <?php if(is_front_page()): ?>
         
         <div class="col-md-12"><!--Top Slider-->
@@ -135,28 +135,30 @@
 
         </div><!--Main Article-->
         
-				<?php endwhile; else : ?>
+		<?php endwhile; else : ?>
 
         <div class="col-md-10"><!--Main Article-->
 				
           <article id="post-not-found" class="hentry clearfix">
-						<header class="article-header">
-							<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-						</header>
-						<section class="entry-content">
-							<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-						</section>
-						<footer class="article-footer">
-							<p><?php _e( 'This is the error message in the page.php template.', 'bonestheme' ); ?></p>
-						</footer>
-					</article>
+            <header class="article-header">
+              <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+            </header>
+            
+            <section class="entry-content">
+		      <p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+		    </section>
+		
+            <footer class="article-footer">
+		      <p><?php _e( 'This is the error message in the page.php template.', 'bonestheme' ); ?></p>
+		    </footer>
+		  </article>
         
         </div><!--Main Article-->
 				
         <?php endif; ?>
           
-		  </div>
-		</div>
+      </div>
+    </div>
   </div>
 </div>
 
