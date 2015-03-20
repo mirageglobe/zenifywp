@@ -42,5 +42,7 @@ Guidelines
 
 Roadmap
 
+- set width of content to 420px which is max reading width - http://maxdesign.com.au/news/em/
 - Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
-- Activate search tool (done)
+- [done] Activate search tool
+
