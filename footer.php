@@ -1,8 +1,8 @@
-		<div class="container">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <?php include ('lowerbar.php'); ?>
-          <hr>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <?php include ('lowerbar.php'); ?>
+      <hr>
           <div class="pull-left">
             <p class="h5 source-org copyright">
               &copy; <?php echo date('Y'); ?> 
