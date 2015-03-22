@@ -6,14 +6,11 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
-
-  <?php // Google Chrome Frame for IE ?>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title><?php wp_title(''); ?></title>
 
-  <?php // mobile meta (hooray!) ?>
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -34,13 +31,10 @@
   
   <link href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="//cdn.jsdelivr.net/bootswatch/3.2.0.1/simplex/bootstrap.min.css" rel="stylesheet">
-  
-	<style type="text/css">
-	</style>
 
-  <!-- // wordpress head functions -->
-	<?php wp_head(); ?>
-	<!-- // end of wordpress head -->
+  <!-- wordpress head -->
+  <?php wp_head(); ?>
+  <!-- wordpress head -->
 </head>
 
 <body <?php body_class(); ?>>
