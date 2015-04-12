@@ -10,19 +10,19 @@ body {
 }
 
 html {
-  background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") no-repeat center center fixed;
+  background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-h1,h2,h3,h4,h5,h6,p,ul,ol,li{
+h1,h2,h3,h4,h5,h6,p,ul,ol,li {
   color: #333;
   font-family: 'Open Sans', sans-serif;
 }
 
-p,ul,ol,li{
+p, ul, ol, li {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
@@ -31,14 +31,40 @@ p,ul,ol,li{
 Fixes img and video content width. also fixes image align
 */
 
-.entry-content img{margin:0 0 1.5em 0;max-width:100%;height:auto}
-.entry-content video,.entry-content object{max-width:100%;height:auto}
-img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both}
+.entry-content img {
+  margin:0 0 1.5em 0;
+  max-width:100%;
+  height:auto;
+}
 
-.article-header a:hover{text-decoration:none;}
-.article-footer-nav a:hover{text-decoration:none;}
+.entry-content video,.entry-content object {
+  max-width:100%;
+  height:auto
+}
 
-.current_page_item {color:yellow;}
+img.aligncenter {
+  margin-right:auto;
+  margin-left:auto;
+  display:block;
+  clear:both
+}
+
+.article-header a:hover {
+  text-decoration:none;
+}
+
+.article-footer-nav a:hover {
+  text-decoration:none;
+}
+
+.container {
+  margin-top: 30px;
+  max-width: 780px;
+}
+
+.current_page_item {
+  color:yellow;
+}
 
 /*
 Fixes gallery to display 5 in a column
@@ -47,15 +73,18 @@ Fixes gallery to display 5 in a column
 .gallery {
   margin: auto;
 }
+
 .gallery-item {
   float: left;
   margin-top: 10px;
   text-align: center;
   width: 20%;
 }
+
 .gallery img {
   border: 2px solid #cfcfcf;
 }
+
 .gallery-caption {
   margin-left: 0;
 }

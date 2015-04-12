@@ -1,4 +1,5 @@
 <?php
+
 //require_once( 'library/bones.php' ); // if you remove this, bones will break
 
 add_action( 'after_setup_theme', 'bone_startup', 16 );
