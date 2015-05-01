@@ -54,6 +54,16 @@
       </nav>
       <!-- end top nav -->
       
+      <!-- search form -->
+      <div class="pull-right h5">
+        <small>
+          <?php get_search_form(); ?>
+        </small>
+      </div>
+      <br>
+      <br>
+      <!-- end search form -->
+      
       <!-- start top slider -->
       <?php if(is_front_page()): ?>
       
@@ -68,13 +78,13 @@
           <div class="item active">
              <img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
               <div class="carousel-caption">
-                <?php bloginfo( 'name' ); ?>
+                <?php //bloginfo( 'name' ); ?>
               </div>
           </div>
           <div class="item">
               <img src="<?php echo get_template_directory_uri(); ?>/library/images/splash02.png" alt="bone">
               <div class="carousel-caption">
-                <?php bloginfo( 'name' ); ?>
+                <?php //bloginfo( 'name' ); ?>
               </div>
           </div>
         </div>
@@ -92,137 +102,147 @@
       <!-- end top slider -->
       
       <!-- start content -->
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <div class="col-md-8 col-md-offset-2">
 
-      <article id="post-<?php the_ID(); ?>" class="" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <header class="clearfix">
+        <article id="post-<?php the_ID(); ?>" class="" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-          <?php if (is_front_page () && (get_post_type()=='page')): ?>
-          <!--Main Page Contents-->
+          <header class="clearfix">
 
-          <?php elseif (is_front_page () && (get_post_type()=='post')): ?>
-          <!--Main Post Contents-->
+            <?php if (is_front_page () && (get_post_type()=='page')): ?>
+            <!--Main Page Contents-->
 
-          <div class="col-md-8 col-md-offset-4">
+            <?php elseif (is_front_page () && (get_post_type()=='post')): ?>
+            <!--Main List Posts -->
+
+            <div class="">
+              <a href="<?php echo esc_url(get_permalink());?>">
+                <div class="h2">                                
+                  <?php the_title(); ?>
+                </div>
+              </a>
+              <small>
+                <i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?>
+              </small>
+            </div>
+
+            <?php else: ?>
+            <!--Main Posts Contents -->
+            
             <a href="<?php echo esc_url(get_permalink());?>">
-            <div class="h2">                                
-              <?php the_title(); ?>
-            </div>
+              <div class="h2">
+                <?php the_title(); ?>
+                <br>
+                <br>
+              </div>
             </a>
-            <small><i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?></small>
-          </div>
 
-          <?php else: ?><!-- if this is single page -->
+            <?php endif; ?>
 
-          <div class="pull-right">
-            <small>
-              <?php get_search_form(); ?>
-              <br>
-            </small>
-          </div>
+          </header>
 
-          <a href="<?php echo esc_url(get_permalink());?>">
-            <div class="h2">
-              <?php the_title(); ?>
+          <section class="clearfix" itemprop="articleBody">
+
+            <div class="">
+              <?php if(is_singular()): ?>
+
+              <!-- is singular displays posts or pages and is single displays just posts -->
+
+              <?php
+                the_content();
+              ?>
+
+              <?php endif; ?>
             </div>
-            <hr>
-          </a>
+          </section>
 
-          <?php endif; ?>
+          <footer class="clearfix">
+            <?php if(is_singular()): ?>
 
-        </header>
-
-        <section class="clearfix" itemprop="articleBody">
-
-          <?php if(is_singular()): ?>
-          
-          <!-- is singular displays posts or pages and is single displays just posts -->
-          
-          <?php
-            the_content();
-          ?>
-          
-          <?php endif; ?>
-
-        </section>
-
-        <footer class="clearfix">
-          <?php if(is_singular()): ?>
-          
-          <!-- is singular displays posts or pages and is single displays just posts -->
-          
-          <div class="pull-right">
-            <small>
-              <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
-              <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
-              <i class="fa fa-user"></i> <?php echo get_the_author();?>
-            </small>
-          </div>
-          <br>
-          <hr>
-          <div class="">
-            <div class="pull-left">
-              <?php previous_post_link( '<i class="fa fa-arrow-circle-o-left"></i> Previous: %link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?>
-
-            </div>
+            <!-- is singular displays posts or pages and is single displays just posts -->
+            <br>
+            <br>
             <div class="pull-right">
-              <?php next_post_link( '<i class="fa fa-arrow-circle-o-right"></i> Next: %link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '</span>' ); ?>
-
+              <small>
+                <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+                <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
+                <i class="fa fa-user"></i> <?php echo get_the_author();?>
+              </small>
             </div>
-          </div>
-          <br>
-          <br>
+            <br>
+            <hr>
+            <div class="">
+              <div class="pull-left">
+                <?php previous_post_link( '<i class="fa fa-arrow-circle-o-left"></i> Previous: %link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?>
 
-          <?php comments_template(); ?>
-          <?php endif; ?>
-        </footer>
-        
-      </article>
+              </div>
+              <div class="pull-right">
+                <?php next_post_link( '<i class="fa fa-arrow-circle-o-right"></i> Next: %link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '</span>' ); ?>
 
-      <?php endwhile; else : ?>
+              </div>
+            </div>
 
-      <!-- if nothing is found ... -->
+            <?php comments_template(); ?>
+            
+            <?php endif; ?>
+          </footer>
 
-      <article>
-        
-        <header class="clearfix">
-          
-          <div class="pull-right">
-            <small>
-              <?php get_search_form(); ?>
+        </article>
+
+        <?php endwhile; else : ?>
+
+        <!-- if nothing is found ... -->
+
+        <article>
+
+          <header class="clearfix">
+
+            <div class="h2">
+              Oops ...
               <br>
-            </small>
-          </div>
-          
-          <div class="h2">
-            Oops ...
-          </div>
-          <hr>
-          
-        </header>
+              <br>
+            </div>
 
-        <section class="clearfix">
-          <p>
-            Uh Oh. Post not found. Something is missing. Try double checking things.
-          </p>
-        </section>
+          </header>
 
-        <footer class="clearfix">
-         <div class="pull-right">
-           <small>
-            <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
-            <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
-            <i class="fa fa-user"></i> <?php echo get_the_author();?>
-          </div>
-          </small>
-        </footer>
-        
-      </article>
+          <section class="clearfix">
+            <p>
+              Uh Oh. Post not found. Something is missing. Try double checking things.
+            </p>
+            <br>
+            <br>
+          </section>
 
-      <?php endif; ?>
+          <footer class="clearfix">
+            <br>
+            <br>
+            <div class="pull-right">
+              <small>
+                <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+                <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
+              </small>
+            </div>
+          </footer>
+
+        </article>
+
+        <?php endif; ?> 
       
-      <?php get_footer(); ?>
+      </div>
+      
+      <!-- optional sidebar content -->
+      <div class="col-md-2">
+        <p></p>
+      </div>
+      <!-- end sidebar content -->
+      
+      <!-- end content -->
+            
+      <div class="col-md-12">
+      <?php get_footer(); ?>            
+      </div>
+  
     </div>
   </body>
 </html>

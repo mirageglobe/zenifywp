@@ -1,5 +1,5 @@
 
-<?php include ('lowerbar.php'); ?>
+<?php //include ('lowerbar.php'); ?>
 <hr>
 
 <div class="pull-left h5">
@@ -32,3 +32,4 @@
 <script src="//cdn.jsdelivr.net/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <?php wp_footer(); ?>
+  
