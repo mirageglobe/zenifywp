@@ -4,16 +4,16 @@ The comments page is needed for themes since wp3.0
 */
 
 // Do not delete these lines
-	if ( ! empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) )
-		die ('Please do not load this page directly. Thanks!');
+if ( ! empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) )
+    die ('Please do not load this page directly. Thanks!');
 
-	if ( post_password_required() ) { ?>
-		<div class="alert alert-help">
-			<p class="nocomments">This post is password protected.</p>
-		</div>
-	<?php
-		return;
-	}
+if ( post_password_required() ) { ?>
+    <div class="alert alert-help">
+      <p class="">This post is password protected.</p>
+    </div>
+<?php
+  return;
+}
 ?>
 
 <?php // You can start editing here. ?>

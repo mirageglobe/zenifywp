@@ -2,13 +2,6 @@
 General hip visuals
 */
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  padding-top: 20px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-
 html {
   background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") no-repeat center fixed;
   -webkit-background-size: cover;
@@ -17,14 +10,52 @@ html {
   background-size: cover;
 }
 
-h1,h2,h3,h4,h5,h6,p,ul,ol,li {
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.container {
+  margin-top: 30px;
+  max-width: 900px;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   color: #333;
   font-family: 'Open Sans', sans-serif;
 }
 
 p, ul, ol, li {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both
+}
+
+a:link {
+  text-decoration: none;
+  cursor: auto;
+}
+
+a:visted {
+  text-decoration: none;
+  cursor: auto;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active {
+  text-decoration: none;
+  cursor: auto;
 }
 
 /*
@@ -37,33 +68,10 @@ Fixes img and video content width. also fixes image align
   height:auto;
 }
 
-.entry-content video,.entry-content object {
-  max-width:100%;
-  height:auto
-}
-
-img.aligncenter {
-  margin-right:auto;
-  margin-left:auto;
-  display:block;
-  clear:both
-}
-
-.article-header a:hover {
-  text-decoration:none;
-}
-
-.article-footer-nav a:hover {
-  text-decoration:none;
-}
-
-.container {
-  margin-top: 30px;
-  max-width: 780px;
-}
-
-.current_page_item {
-  color:yellow;
+.entry-content video,
+.entry-content object {
+  max-width: 100%;
+  height: auto
 }
 
 /*
@@ -92,7 +100,3 @@ Fixes gallery to display 5 in a column
 /*
 Customisation
 */
-
-.bggrey {
-  background-color: #EEE;
-}

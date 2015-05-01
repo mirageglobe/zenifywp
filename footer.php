@@ -15,7 +15,7 @@
   </small>
 </div>
 
-<div class="pull-right h5">
+<div class="pull-right h5 small">
   <small>
     <i class="fa fa-cog "></i>&nbsp;
     <a href="<?php echo home_url(); ?>/wp-admin">Admin</a>
@@ -23,6 +23,9 @@
   </small>
 </div>
 
+<br>
+<br>
+<br>
 <!-- javascript at the end of the document so the pages load faster -->
 
 <script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>

@@ -8,7 +8,6 @@
   
     <?php // This content shows up if there are no widgets defined in the backend. ?>
     <div>
-      -
     </div>
   
   <?php endif; ?>

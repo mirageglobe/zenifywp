@@ -94,15 +94,17 @@
       <!-- start content -->
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-      <article id="post-<?php the_ID(); ?>" class="article" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+      <article id="post-<?php the_ID(); ?>" class="" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-        <header class="article-header">
+        <header class="clearfix">
 
           <?php if (is_front_page () && (get_post_type()=='page')): ?>
+          <!--Main Page Contents-->
 
           <?php elseif (is_front_page () && (get_post_type()=='post')): ?>
+          <!--Main Post Contents-->
 
-          <div class="col-md-8 col-md-offset-4"><!--Main Article-->
+          <div class="col-md-8 col-md-offset-4">
             <a href="<?php echo esc_url(get_permalink());?>">
             <div class="h2">                                
               <?php the_title(); ?>
@@ -131,12 +133,13 @@
 
         </header>
 
-        <section class="entry-content clearfix" itemprop="articleBody">
+        <section class="clearfix" itemprop="articleBody">
 
           <?php if(is_singular()): ?>
           
+          <!-- is singular displays posts or pages and is single displays just posts -->
+          
           <?php
-            // is singular displays posts or pages and is single displays just posts
             the_content();
           ?>
           
@@ -144,17 +147,21 @@
 
         </section>
 
-        <footer class="article-footer">
+        <footer class="clearfix">
           <?php if(is_singular()): ?>
           
+          <!-- is singular displays posts or pages and is single displays just posts -->
+          
           <div class="pull-right">
-            <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
-            <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
-            <i class="fa fa-user"></i> <?php echo get_the_author();?>
+            <small>
+              <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+              <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
+              <i class="fa fa-user"></i> <?php echo get_the_author();?>
+            </small>
           </div>
           <br>
           <hr>
-          <div class="article-footer-nav">
+          <div class="">
             <div class="pull-left">
               <?php previous_post_link( '<i class="fa fa-arrow-circle-o-left"></i> Previous: %link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?>
 
@@ -175,23 +182,43 @@
 
       <?php endwhile; else : ?>
 
-      <div class="col-md-10">
+      <!-- if nothing is found ... -->
 
-        <article id="post-not-found" class="hentry clearfix">
-          <header class="article-header">
-            <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-          </header>
+      <article>
+        
+        <header class="clearfix">
+          
+          <div class="pull-right">
+            <small>
+              <?php get_search_form(); ?>
+              <br>
+            </small>
+          </div>
+          
+          <div class="h2">
+            Oops ...
+          </div>
+          <hr>
+          
+        </header>
 
-          <section class="entry-content">
-            <p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-          </section>
+        <section class="clearfix">
+          <p>
+            Uh Oh. Post not found. Something is missing. Try double checking things.
+          </p>
+        </section>
 
-          <footer class="article-footer">
-            <p><?php _e( 'This is the error message in the page.php template.', 'bonestheme' ); ?></p>
-          </footer>
-        </article>
-
-      </div>
+        <footer class="clearfix">
+         <div class="pull-right">
+           <small>
+            <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+            <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
+            <i class="fa fa-user"></i> <?php echo get_the_author();?>
+          </div>
+          </small>
+        </footer>
+        
+      </article>
 
       <?php endif; ?>
       
