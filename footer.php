@@ -2,25 +2,21 @@
 <?php //include ('lowerbar.php'); ?>
 <hr>
 
-<div class="pull-left h5">
-  <small>
-    &copy; <?php echo date('Y'); ?>
-    &middot;
-    <i class="fa fa-home"></i> <?php bloginfo( 'name' ); ?>
-    &middot;
-    <i class="fa fa-globe"></i> using
-    <a href="https://github.com/mirageglobe/zenifywordpress">zenifywordpress theme</a>
-    by <a href="http://www.dracoturtur.com">www.dracoturtur.com</a>
-    &middot;
-  </small>
+<div class="pull-left texttiny">
+  &copy; <?php echo date('Y'); ?>
+  &middot;
+  <i class="fa fa-home"></i> <?php bloginfo( 'name' ); ?>
+  &middot;
+  <i class="fa fa-globe"></i> using
+  <a href="https://github.com/mirageglobe/zenifywordpress">zenifywordpress theme</a>
+  by <a href="http://www.dracoturtur.com">www.dracoturtur.com</a>
+  &middot;
 </div>
 
-<div class="pull-right h5 small">
-  <small>
-    <i class="fa fa-cog "></i>&nbsp;
-    <a href="<?php echo home_url(); ?>/wp-admin">Admin</a>
-    &middot; <i class="fa fa-rss "></i> <a href="feed">RSS Feed</a>
-  </small>
+<div class="pull-right texttiny">
+  <i class="fa fa-cog "></i>&nbsp;
+  <a href="<?php echo home_url(); ?>/wp-admin">Admin</a>
+  &middot; <i class="fa fa-rss "></i> <a href="feed">RSS Feed</a>
 </div>
 
 <br>

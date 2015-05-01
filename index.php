@@ -55,10 +55,8 @@
       <!-- end top nav -->
       
       <!-- search form -->
-      <div class="pull-right h5">
-        <small>
-          <?php get_search_form(); ?>
-        </small>
+      <div class="pull-right texttiny">
+        <?php get_search_form(); ?>
       </div>
       <br>
       <br>
@@ -76,16 +74,16 @@
         
         <div class="carousel-inner">
           <div class="item active">
-             <img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
-              <div class="carousel-caption">
-                <?php //bloginfo( 'name' ); ?>
-              </div>
+           <img src="<?php echo get_template_directory_uri(); ?>/library/images/splash01.png" alt="bone">
+            <div class="carousel-caption">
+              <?php //bloginfo( 'name' ); ?>
+            </div>
           </div>
           <div class="item">
-              <img src="<?php echo get_template_directory_uri(); ?>/library/images/splash02.png" alt="bone">
-              <div class="carousel-caption">
-                <?php //bloginfo( 'name' ); ?>
-              </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/library/images/splash02.png" alt="bone">
+            <div class="carousel-caption">
+              <?php //bloginfo( 'name' ); ?>
+            </div>
           </div>
         </div>
 
@@ -97,6 +95,8 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
       </div>
+      
+      <br>
       
       <?php endif; ?>
       <!-- end top slider -->
@@ -118,7 +118,7 @@
 
             <div class="">
               <a href="<?php echo esc_url(get_permalink());?>">
-                <div class="h2">                                
+                <div class="texttitle">                                
                   <?php the_title(); ?>
                 </div>
               </a>
@@ -131,7 +131,7 @@
             <!--Main Posts Contents -->
             
             <a href="<?php echo esc_url(get_permalink());?>">
-              <div class="h2">
+              <div class="texttitle">
                 <?php the_title(); ?>
                 <br>
                 <br>
@@ -144,7 +144,7 @@
 
           <section class="clearfix" itemprop="articleBody">
 
-            <div class="">
+            <div class="text">
               <?php if(is_singular()): ?>
 
               <!-- is singular displays posts or pages and is single displays just posts -->
@@ -163,23 +163,19 @@
             <!-- is singular displays posts or pages and is single displays just posts -->
             <br>
             <br>
-            <div class="pull-right">
-              <small>
-                <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
-                <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
-                <i class="fa fa-user"></i> <?php echo get_the_author();?>
-              </small>
+            <div class="pull-right texttiny">
+              <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
+              <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
+              <i class="fa fa-user"></i> <?php echo get_the_author();?>
             </div>
             <br>
             <hr>
-            <div class="">
+            <div class="texttiny">
               <div class="pull-left">
                 <?php previous_post_link( '<i class="fa fa-arrow-circle-o-left"></i> Previous: %link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?>
-
               </div>
               <div class="pull-right">
                 <?php next_post_link( '<i class="fa fa-arrow-circle-o-right"></i> Next: %link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '</span>' ); ?>
-
               </div>
             </div>
 
@@ -198,7 +194,7 @@
 
           <header class="clearfix">
 
-            <div class="h2">
+            <div class="texttitle">
               Oops ...
               <br>
               <br>
@@ -207,22 +203,28 @@
           </header>
 
           <section class="clearfix">
-            <p>
-              Uh Oh. Post not found. Something is missing. Try double checking things.
-            </p>
-            <br>
-            <br>
+            
+            <div class="text">
+              <p>
+                Uh Oh. Post not found. Something is missing. Try double checking things.
+              </p>
+              <br>
+              <br>
+            </div>
+            
           </section>
 
           <footer class="clearfix">
-            <br>
-            <br>
-            <div class="pull-right">
-              <small>
+            
+            <div class="text">
+              <br>
+              <br>
+              <div class="pull-right texttiny">
                 <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
                 <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
-              </small>
+              </div>
             </div>
+            
           </footer>
 
         </article>

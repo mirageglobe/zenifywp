@@ -23,12 +23,19 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  font-size: 16px;
   color: #333;
   font-family: 'Open Sans', sans-serif;
 }
 
 p, ul, ol, li {
-  font-size: 15px;
+  font-size: 14px;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 img.aligncenter {
@@ -100,3 +107,45 @@ Fixes gallery to display 5 in a column
 /*
 Customisation
 */
+
+@media screen {
+  /* 
+  CSS for all : bootstrap large devices desktop : default larger screen
+  */
+    
+  .texttitle {
+    font-size: 28px;
+  }
+
+  .textsubtitle {
+    font-size: 20px;
+  }
+
+  .textsubsubtitle {
+    font-size: 18px;
+  }
+  
+  .text {
+    font-size: 16px;
+    text-align: justify;
+  }
+  
+  .texttiny {
+    font-size: 10px;
+    text-align: justify;
+  }
+  
+  .pre {
+    /* auto line breaks converting \n to <br> */
+    white-space: pre;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  /* 
+  CSS for tablet and mobiles : bootstrap extra small devices desktop 
+  : leave empty if same as above larger screen
+  */
+  
+}
