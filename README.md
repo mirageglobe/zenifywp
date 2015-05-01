@@ -19,9 +19,9 @@ Zenify is designed to make the life of developers easier. It's built using HTML5
 
 Features
 ------------------------------------------------
-- Includes Bootstrap 3.2.0 via Bootswatch 3.2.0.1 (via CDN)
-- Includes FontAwesome 4.2.0 (via CDN)
-- Includes Jquery 2.1.1 (via CDN)
+- Includes Bootstrap (via CDN)
+- Includes FontAwesome (via CDN)
+- Includes Jquery (via CDN)
 - Mobile Responsive (First)
 - Preset gallery layout supported
 - RSS Feed supported
@@ -42,7 +42,15 @@ Guidelines
 
 Roadmap
 
-- set width of content to 420px which is max reading width - http://maxdesign.com.au/news/em/
+- support child themes
+- [done] set width of content to 420px which is max reading width - http://maxdesign.com.au/news/em/
 - Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
 - [done] Activate search tool
+
+
+References
+------------------------------------------------
+
+- https://codex.wordpress.org/Theme_Development#Template_File_Checklist
+
 
