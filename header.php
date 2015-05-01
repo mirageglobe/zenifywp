@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <title><?php wp_title(''); ?></title>
@@ -18,6 +18,7 @@
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+<link rel="profile" href="http://gmpg.org/xfn/11" />
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 

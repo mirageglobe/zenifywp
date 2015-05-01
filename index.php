@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<html>
+<html <?php language_attributes(); ?>>
   
   <head>
     <?php get_header(); ?>
