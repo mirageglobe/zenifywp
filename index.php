@@ -125,6 +125,9 @@
               <small>
                 <i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?>
               </small>
+              
+              <br>
+              <br>
             </div>
 
             <?php else: ?>
