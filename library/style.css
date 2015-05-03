@@ -81,6 +81,11 @@ Fixes img and video content width. also fixes image align
   height: auto
 }
 
+/* disables funny bootstrap carousel background */
+.carousel-control.left, .carousel-control.right {
+  background-image: none
+}
+
 /*
 Fixes gallery to display 5 in a column
 */
