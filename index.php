@@ -181,7 +181,7 @@
             
             <div class="text">
               <p>
-                Uh Oh. Post not found. Something is missing. Try double checking things.
+                Uh Oh. Post not found. Something is missing. Try double checking the url or search from searchbox above.
               </p>
               <br>
               <br>
