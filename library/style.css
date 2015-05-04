@@ -12,24 +12,10 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  color: #333;
   padding-top: 20px;
   padding-bottom: 0px;
   margin-bottom: 0px;
-}
-
-.container {
-  margin-top: 30px;
-  max-width: 900px;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, ol, li {
-  font-size: 16px;
-  color: #333;
-  font-family: 'Open Sans', sans-serif;
-}
-
-p, ul, ol, li {
-  font-size: 14px;
 }
 
 img {
@@ -63,6 +49,15 @@ a:hover {
 a:active {
   text-decoration: none;
   cursor: auto;
+}
+
+/*
+Container
+*/
+
+.container {
+  margin-top: 30px;
+  max-width: 900px;
 }
 
 /*
@@ -135,7 +130,7 @@ Customisation
   }
   
   .texttiny {
-    font-size: 11px;
+    font-size: 10px;
   }
   
   .pre {
