@@ -15,7 +15,6 @@
 
 <div class="pull-right texttiny">
   <i class="fa fa-cog "></i>&nbsp;
-  <a href="<?php echo home_url(); ?>/wp-admin">Admin</a>
   &middot; <i class="fa fa-rss "></i> <a href="feed">RSS Feed</a>
 </div>
 
