@@ -214,6 +214,15 @@
       </div>
       <!-- end sidebar content -->
       
+      <!-- optional lowermenu content -->
+      <div class="col-md-12">
+      <?php
+        get_template_part( 'lowermenu' );
+        // get the content splash template file. same as include
+      ?>          
+      </div>
+      <!-- end lowermenu content -->
+      
       <!-- end content -->
             
       <div class="col-md-12">
