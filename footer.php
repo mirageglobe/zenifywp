@@ -14,7 +14,7 @@
 </div>
 
 <div class="pull-right texttiny">
-  <i class="fa fa-cog "></i>&nbsp;
+  &nbsp;
   &middot; <i class="fa fa-rss "></i> <a href="feed">RSS Feed</a>
 </div>
 
@@ -27,4 +27,3 @@
 <script src="//cdn.jsdelivr.net/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <?php wp_footer(); ?>
-  
