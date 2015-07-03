@@ -90,18 +90,16 @@ Fixes gallery to display 5 in a column
 }
 
 .gallery-item {
-  float: left;
-  margin-top: 10px;
-  text-align: center;
-  width: 20%;
-}
-
-.gallery img {
-  border: 2px solid #cfcfcf;
+  padding: 2px;
 }
 
 .gallery-caption {
-  margin-left: 0;
+  font-size: 10px;
+}
+
+.gallery a img {
+  /* remove grey border around images */
+  border: 0 !important;
 }
 
 /*

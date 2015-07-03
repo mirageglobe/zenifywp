@@ -1,7 +1,7 @@
 <?php
 /*
 If you have any custom functions, it's best to put them in the functions.php file.
-*/
+
 
 // we're firing all out initial functions at the start
 add_action( 'after_setup_theme', 'bones_ahoy', 16 );
@@ -45,7 +45,7 @@ a mess. Let's clean it up by
 removing all the junk we don't
 need.
 *********************/
-
+/*
 function bones_head_cleanup() {
 	// category feeds
 	// remove_action( 'wp_head', 'feed_links_extra', 3 );
@@ -71,7 +71,7 @@ function bones_head_cleanup() {
 	add_filter( 'script_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
 
 } /* end bones head cleanup */
-
+/*
 // remove WP version from RSS
 function bones_rss_version() { return ''; }
 
@@ -106,7 +106,7 @@ function bones_gallery_style($css) {
 /*********************
 SCRIPTS & ENQUEUEING
 *********************/
-
+/*
 // loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
 	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
@@ -130,7 +130,7 @@ function bones_scripts_and_styles() {
 /*********************
 THEME SUPPORT
 *********************/
-
+/*
 // Adding WP 3+ Functions & Theme Support
 function bones_theme_support() {
 
@@ -187,7 +187,7 @@ function bones_theme_support() {
 /*********************
 MENUS & NAVIGATION
 *********************/
-
+/*
 // the main menu
 function bones_main_nav() {
 	// display the wp3 menu if available
@@ -205,7 +205,7 @@ function bones_main_nav() {
 		'fallback_cb' => 'bones_main_nav_fallback'      // fallback function
 	));
 } /* end bones main nav */
-
+/*
 // the footer menu (should you choose to use one)
 function bones_footer_links() {
 	// display the wp3 menu if available
@@ -223,7 +223,7 @@ function bones_footer_links() {
 		'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 	));
 } /* end bones footer link */
-
+/*
 // this is the fallback for header menu
 function bones_main_nav_fallback() {
 	wp_page_menu( array(
@@ -241,11 +241,11 @@ function bones_main_nav_fallback() {
 function bones_footer_links_fallback() {
 	/* you can put a default here if you like */
 }
-
+/*
 /*********************
 RELATED POSTS FUNCTION
 *********************/
-
+/*
 // Related Posts Function (call using bones_related_posts(); )
 function bones_related_posts() {
 	echo '<ul id="bones-related-posts">';
@@ -257,7 +257,7 @@ function bones_related_posts() {
 		}
 		$args = array(
 			'tag' => $tag_arr,
-			'numberposts' => 5, /* you can change this to show more */
+			'numberposts' => 5, // you can change this to show more
 			'post__not_in' => array($post->ID)
 		);
 		$related_posts = get_posts( $args );
@@ -271,12 +271,12 @@ function bones_related_posts() {
 	}
 	wp_reset_query();
 	echo '</ul>';
-} /* end bones related posts function */
+} // end bones related posts function
 
 /*********************
 PAGE NAVI
 *********************/
-
+/*
 // Numeric Page Navi (built into the theme by default)
 function bones_page_navi() {
 	global $wp_query;
@@ -304,7 +304,7 @@ function bones_page_navi() {
 /*********************
 RANDOM CLEANUP ITEMS
 *********************/
-
+/*
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
 function bones_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
@@ -322,6 +322,7 @@ function bones_excerpt_more($more) {
  *
  * This is necessary to allow usage of the usual l10n process with printf().
  */
+/*
 function bones_get_the_author_posts_link() {
 	global $authordata;
 	if ( !is_object( $authordata ) )

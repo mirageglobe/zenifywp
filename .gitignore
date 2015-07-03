@@ -1,6 +1,12 @@
 # folders and files to be ignored by git
 
 ############
+## Custom
+############
+
+reference/
+
+############
 ## OSes
 ############
 

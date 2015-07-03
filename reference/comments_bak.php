@@ -1,7 +1,7 @@
 <?php
 /*
 The comments page is needed for themes since wp3.0
-*/
+
 
 // Do not delete these lines
 if ( ! empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) )
