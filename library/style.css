@@ -131,6 +131,14 @@ Customisation
     font-size: 10px;
   }
   
+  .bold {
+    font-weight: bolder;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
   .pre {
     /* auto line breaks converting \n to <br> */
     white-space: pre;

@@ -18,19 +18,20 @@ if ( post_password_required() )
 ?>
 
 <div id="comments" class="comments-area">
-  <br>
+  <br><hr>
+  <p class="texttitle">Comments</p>
   <?php if ( have_comments() ) : ?>
-  <p class="text">
+  <p class="texttiny">
   <?php
     printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'twentythirteen' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
   </p>
 
-  <ol class="comment-list">
+  <ol class="comment-list texttiny bold">
   <?php
     wp_list_comments( array(
       'style'       => 'ol',
       'short_ping'  => true,
-      'avatar_size' => 74,
+      'avatar_size' => 50,
     ) );
   ?>
   </ol><!-- .comment-list -->
@@ -41,7 +42,7 @@ if ( post_password_required() )
   ?>
 
   <nav class="navigation comment-navigation" role="navigation">
-    <p class="screen-reader-text section-heading">
+    <p class="screen-reader-text section-heading texttiny">
       <?php _e( 'Comment navigation', 'twentythirteen' ); ?>
     </p>
 
@@ -54,7 +55,7 @@ if ( post_password_required() )
   ?>
 
   <?php if ( ! comments_open() && get_comments_number() ) : ?>
-    <p class="no-comments"><?php _e( 'Comments are closed.' , 'twentythirteen' ); ?></p>
+    <p class="texttiny no-comments"><?php _e( 'Comments are closed.' , 'twentythirteen' ); ?></p>
   <?php endif; ?>
 
 <?php endif; // have_comments() ?>
