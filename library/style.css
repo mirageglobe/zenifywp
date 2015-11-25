@@ -3,7 +3,7 @@ General hip visuals
 */
 
 html {
-  background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") no-repeat center fixed;
+  background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,8 +13,8 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   color: #333;
-  padding: 0px;
-  margin-bottom: 0px;
+  /*padding: 0px;
+  margin-bottom: 0px;*/
 }
 
 img {
@@ -162,10 +162,8 @@ Customisation
   : leave empty if same as above larger screen
   */
   .container {
-    margin-top: 0px;
+    margin-top: 10px;
+    padding: 0px 10px;
   }
 
-  .html {
-    margin-top: 0px;
-  }
 }
