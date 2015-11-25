@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
-  
+
   <head>
     <?php get_header(); ?>
   </head>
@@ -9,11 +9,11 @@
   <body <?php body_class(); ?>>
 
     <div class="container">
-      <a id="top"></a> 
-      
-      <!-- start top nav -->
+      <a id="top"></a>
+
+      <!-- start top nav supports mobile -->
       <nav class="navbar navbar-default" role="navigation">
-        
+
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bsnavbar-collapse">
@@ -53,26 +53,24 @@
         </div>
       </nav>
       <!-- end top nav -->
-      
+
       <!-- search form -->
-      <div class="pull-right texttiny">
+      <div class="pull-right texttiny zen_searchform">
         <?php get_search_form(); ?>
       </div>
-      <br>
-      <br>
       <!-- end search form -->
-      
+
       <!-- start top slider -->
       <?php if(is_front_page()): ?>
-      
+
       <?php
         get_template_part( 'splash' );
         // get the content splash template file. same as include
       ?>
-      
+
       <?php endif; ?>
       <!-- end top slider -->
-      
+
       <!-- start content -->
       <div class="col-md-8 col-md-offset-2">
 
@@ -90,21 +88,21 @@
 
             <div class="">
               <a href="<?php echo esc_url(get_permalink());?>">
-                <div class="texttitle">                                
+                <div class="texttitle">
                   <?php the_title(); ?>
                 </div>
               </a>
               <small>
                 <i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?>
               </small>
-              
+
               <br>
               <br>
             </div>
 
             <?php else: ?>
             <!--Main Posts Contents -->
-            
+
             <a href="<?php echo esc_url(get_permalink());?>">
               <div class="texttitle">
                 <?php the_title(); ?>
@@ -155,7 +153,7 @@
             </div>
 
             <?php comments_template(); ?>
-            
+
             <?php endif; ?>
           </footer>
 
@@ -178,19 +176,19 @@
           </header>
 
           <section class="clearfix">
-            
+
             <div class="text">
               <p>
-                Uh Oh. Post not found. Something is missing. Try double checking the url or search from searchbox above.
+                Post not found. Try checking the url or search from searchbox above.
               </p>
               <br>
               <br>
             </div>
-            
+
           </section>
 
           <footer class="clearfix">
-            
+
             <div class="text">
               <br>
               <br>
@@ -199,36 +197,36 @@
                 <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
               </div>
             </div>
-            
+
           </footer>
 
         </article>
 
-        <?php endif; ?> 
-      
+        <?php endif; ?>
+
       </div>
-      
+
       <!-- optional sidebar content -->
       <div class="col-md-2">
         <p></p>
       </div>
       <!-- end sidebar content -->
-      
+
       <!-- optional lowermenu content -->
       <div class="col-md-12">
       <?php
         get_template_part( 'lowermenu' );
         // get the content splash template file. same as include
-      ?>          
+      ?>
       </div>
       <!-- end lowermenu content -->
-      
+
       <!-- end content -->
-            
+
       <div class="col-md-12">
-      <?php get_footer(); ?>            
+        <?php get_footer(); ?>
       </div>
-  
+
     </div>
   </body>
 </html>

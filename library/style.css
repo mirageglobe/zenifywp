@@ -13,8 +13,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   color: #333;
-  padding-top: 20px;
-  padding-bottom: 0px;
+  padding: 0px;
   margin-bottom: 0px;
 }
 
@@ -56,8 +55,7 @@ Container
 */
 
 .container {
-  margin-top: 30px;
-  max-width: 900px;
+  margin-top: 0px;
 }
 
 /*
@@ -103,6 +101,14 @@ Fixes gallery to display 5 in a column
 }
 
 /*
+Search Form
+*/
+
+.zen_searchform {
+  padding-bottom: 10px;
+}
+
+/*
 Customisation
 */
 
@@ -110,7 +116,11 @@ Customisation
   /* 
   CSS for all : bootstrap large devices desktop : default larger screen
   */
-    
+  .container {
+    margin-top: 30px;
+    max-width: 900px;
+  }
+
   .texttitle {
     font-size: 26px;
   }
@@ -122,15 +132,15 @@ Customisation
   .textsubsubtitle {
     font-size: 18px;
   }
-  
+
   .text {
     font-size: 16px;
   }
-  
+
   .texttiny {
     font-size: 10px;
   }
-  
+
   .bold {
     font-weight: bolder;
   }
@@ -143,7 +153,7 @@ Customisation
     /* auto line breaks converting \n to <br> */
     white-space: pre;
   }
-  
+
 }
 
 @media screen and (max-width: 768px) {
@@ -151,5 +161,11 @@ Customisation
   CSS for tablet and mobiles : bootstrap extra small devices desktop 
   : leave empty if same as above larger screen
   */
-  
+  .container {
+    margin-top: 0px;
+  }
+
+  .html {
+    margin-top: 0px;
+  }
 }

@@ -1,7 +1,5 @@
 <?php
 
-//require_once( 'library/addfunction.php' );
-
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
@@ -32,15 +30,13 @@ you like. Enjoy!
 function register_styles() {
 
   if (!is_admin()) {
+    // register main stylesheet
+    wp_register_style( 'zen-stylesheet', get_stylesheet_directory_uri() . '/library/style.css', array(), '', 'all' );
 
-		// register main stylesheet
-		wp_register_style( 'zen-stylesheet', get_stylesheet_directory_uri() . '/library/style.css', array(), '', 'all' );
+    // enqueue styles and scripts
+    wp_enqueue_style( 'zen-stylesheet' );
+  }
 
-		// enqueue styles and scripts
-		wp_enqueue_style( 'zen-stylesheet' );
-
-	}
-  
 }
 
 add_action( 'wp_enqueue_scripts', 'register_styles', 999 );
