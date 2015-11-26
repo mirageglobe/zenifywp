@@ -114,6 +114,21 @@ Customisation
   /* 
   CSS for all : bootstrap large devices desktop : default larger screen
   */
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 150%;
+  }
+  
+  p, pre, blockquote{
+    font-size: 22px;
+  }
+  
+  pre {
+    /* auto line breaks converting \n to <br> */
+    white-space: pre;
+  }
+  
   .container {
     margin-top: 30px;
     max-width: 900px;
@@ -152,10 +167,22 @@ Customisation
   .italic {
     font-style: italic;
   }
-
-  .pre {
-    /* auto line breaks converting \n to <br> */
-    white-space: pre;
+  
+  /*
+  WordPress components
+  */
+  
+  .comment-form * {
+    font-size: 12px;
+  }
+  
+  .comment-list * {
+    font-size: 12px;
+  }
+  
+  .comment-form-comment textarea, label { 
+    /* vertical-align: top; */
+    display: block; /* make the comment: to be above text area. */
   }
 
 }
