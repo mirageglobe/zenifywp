@@ -7,9 +7,10 @@
   </head>
 
   <body <?php body_class(); ?>>
+    <!-- Anchor for top scroller -->
+    <a id="top"></a>
 
     <div class="container">
-      <a id="top"></a>
 
       <!-- start top nav supports mobile -->
       <nav class="navbar navbar-default" role="navigation">
@@ -72,7 +73,7 @@
       <!-- end top slider -->
 
       <!-- start content -->
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-10 col-md-offset-1">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -207,7 +208,7 @@
       </div>
 
       <!-- optional sidebar content -->
-      <div class="col-md-2">
+      <div class="col-md-1">
         <p></p>
       </div>
       <!-- end sidebar content -->

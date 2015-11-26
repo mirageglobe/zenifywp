@@ -11,10 +11,8 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', 'Lato', 'Open Sans', sans-serif;
   color: #333;
-  /*padding: 0px;
-  margin-bottom: 0px;*/
 }
 
 img {
@@ -122,23 +120,29 @@ Customisation
   }
 
   .texttitle {
-    font-size: 26px;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
   }
 
   .textsubtitle {
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
   }
 
   .textsubsubtitle {
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
   }
 
   .text {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .texttiny {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .bold {
