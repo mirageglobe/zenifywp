@@ -1,80 +1,41 @@
 <!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
-  
+
   <head>
     <?php get_header(); ?>
   </head>
 
   <body <?php body_class(); ?>>
+    <!-- Anchor for top scroller -->
+    <a id="top"></a>
 
     <div class="container">
-      <a id="top"></a> 
-      
-      <!-- start top nav -->
-      <nav class="navbar navbar-default" role="navigation">
-        
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bsnavbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
 
-          <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="nofollow">
-            <img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" class="img-rounded pull-left" width="20px">&nbsp;
-            <?php bloginfo( 'name' ); ?>
-          </a>
-        </div>
+      <?php
+        get_template_part( 'menuboxtop' );
+        // get the template file. same as include.
+      ?>
 
-        <!-- top nav collapse -->
-        <div class="collapse navbar-collapse" id="bsnavbar-collapse">
-        <?php 
-
-        $menubarpill = wp_page_menu(array(
-          'depth'       => 0,
-          'sort_column' => 'menu_order, post_title',
-          'menu_class'  => 'menu',
-          'include'     => '',
-          'exclude'     => '',
-          'echo'        => false,
-          'show_home'   => false,
-          'link_before' => '',
-          'link_after'  => '' 
-        )); 
-
-        $menubarpill = str_replace('<ul>', '<ul class="nav navbar-nav navbar-right">', $menubarpill);
-        $menubarpill = str_replace("<ul class='children'>", '<ul class="dropdown-menu">', $menubarpill);
-
-        echo $menubarpill;
-        ?>
-        </div>
-      </nav>
-      <!-- end top nav -->
-      
       <!-- search form -->
-      <div class="pull-right texttiny">
+      <div class="pull-right texttiny zen_searchform">
         <?php get_search_form(); ?>
       </div>
-      <br>
-      <br>
       <!-- end search form -->
-      
+
       <!-- start top slider -->
       <?php if(is_front_page()): ?>
-      
+
       <?php
         get_template_part( 'splash' );
         // get the content splash template file. same as include
       ?>
-      
+
       <?php endif; ?>
       <!-- end top slider -->
-      
+
       <!-- start content -->
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-10 col-md-offset-1">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -90,21 +51,21 @@
 
             <div class="">
               <a href="<?php echo esc_url(get_permalink());?>">
-                <div class="texttitle">                                
+                <div class="texttitle">
                   <?php the_title(); ?>
                 </div>
               </a>
               <small>
                 <i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?>
               </small>
-              
+
               <br>
               <br>
             </div>
 
             <?php else: ?>
             <!--Main Posts Contents -->
-            
+
             <a href="<?php echo esc_url(get_permalink());?>">
               <div class="texttitle">
                 <?php the_title(); ?>
@@ -155,7 +116,7 @@
             </div>
 
             <?php comments_template(); ?>
-            
+
             <?php endif; ?>
           </footer>
 
@@ -178,19 +139,19 @@
           </header>
 
           <section class="clearfix">
-            
+
             <div class="text">
               <p>
-                Uh Oh. Post not found. Something is missing. Try double checking the url or search from searchbox above.
+                Post not found. Try checking the url or search from searchbox above.
               </p>
               <br>
               <br>
             </div>
-            
+
           </section>
 
           <footer class="clearfix">
-            
+
             <div class="text">
               <br>
               <br>
@@ -199,36 +160,36 @@
                 <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
               </div>
             </div>
-            
+
           </footer>
 
         </article>
 
-        <?php endif; ?> 
-      
+        <?php endif; ?>
+
       </div>
-      
+
       <!-- optional sidebar content -->
-      <div class="col-md-2">
+      <div class="col-md-1">
         <p></p>
       </div>
       <!-- end sidebar content -->
-      
+
       <!-- optional lowermenu content -->
       <div class="col-md-12">
       <?php
-        get_template_part( 'lowermenu' );
-        // get the content splash template file. same as include
-      ?>          
+        get_template_part( 'menuboxbottom' );
+        // get the template file. same as include.
+      ?>
       </div>
       <!-- end lowermenu content -->
-      
+
       <!-- end content -->
-            
+
       <div class="col-md-12">
-      <?php get_footer(); ?>            
+        <?php get_footer(); ?>
       </div>
-  
+
     </div>
   </body>
 </html>

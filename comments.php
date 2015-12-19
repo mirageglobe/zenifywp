@@ -1,13 +1,7 @@
 <?php
 /**
  * The template for displaying Comments
- *
- * The area of the page that contains comments and the comment form.
- *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
- */
+*/
 
 /*
  * If the current post is protected by a password and the visitor has not yet
@@ -23,15 +17,15 @@ if ( post_password_required() )
   <?php if ( have_comments() ) : ?>
   <p class="texttiny">
   <?php
-    printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'twentythirteen' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
+    printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'zenify' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
   </p>
 
-  <ol class="comment-list texttiny bold">
+  <ol class="comment-list texttiny">
   <?php
     wp_list_comments( array(
-      'style'       => 'ol',
+      'style'       => 'ul',
       'short_ping'  => true,
-      'avatar_size' => 50,
+      'avatar_size' => 30,
     ) );
   ?>
   </ol><!-- .comment-list -->
@@ -46,20 +40,21 @@ if ( post_password_required() )
       <?php _e( 'Comment navigation', 'twentythirteen' ); ?>
     </p>
 
-    <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'twentythirteen' ) ); ?></div>
-    <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentythirteen' ) ); ?></div>
+    <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'zenify' ) ); ?></div>
+    <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'zenify' ) ); ?></div>
   </nav><!-- .comment-navigation -->
 
-  <?php
-    endif; // Check for comment navigation
-  ?>
+  <?php endif; // Check for comment navigation ?>
 
   <?php if ( ! comments_open() && get_comments_number() ) : ?>
-    <p class="texttiny no-comments"><?php _e( 'Comments are closed.' , 'twentythirteen' ); ?></p>
+    <br>
+    <p class="texttiny no-comments"><?php _e( 'Comments are closed.' , 'zenify' ); ?></p>
   <?php endif; ?>
 
 <?php endif; // have_comments() ?>
 
-<?php comment_form(); ?>
+  <div>
+    <?php comment_form(); ?>
+  </div>
 
 </div><!-- #comments -->

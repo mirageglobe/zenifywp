@@ -1,3 +1,5 @@
+<!-- This block is just above footer -->
+
 <br>
 <div>
   <div class="texttiny bold">Recent Posts and Pages</div>

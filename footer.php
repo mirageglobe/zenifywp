@@ -1,5 +1,4 @@
 
-<?php //include ('lowerbar.php'); ?>
 <hr>
 
 <div class="pull-left texttiny">

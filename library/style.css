@@ -3,7 +3,7 @@ General hip visuals
 */
 
 html {
-  background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") no-repeat center fixed;
+  background: url("<?php echo get_template_directory_uri(); ?>/library/images/background.png") repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -11,11 +11,8 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', 'Lato', 'Open Sans', sans-serif;
   color: #333;
-  padding-top: 20px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
 }
 
 img {
@@ -56,8 +53,7 @@ Container
 */
 
 .container {
-  margin-top: 30px;
-  max-width: 900px;
+  margin-top: 0px;
 }
 
 /*
@@ -103,6 +99,14 @@ Fixes gallery to display 5 in a column
 }
 
 /*
+Search Form
+*/
+
+.zen_searchform {
+  padding-bottom: 10px;
+}
+
+/*
 Customisation
 */
 
@@ -110,27 +114,52 @@ Customisation
   /* 
   CSS for all : bootstrap large devices desktop : default larger screen
   */
-    
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 150%;
+  }
+  
+  p, pre, blockquote{
+    font-size: 22px;
+  }
+  
+  pre {
+    /* auto line breaks converting \n to <br> */
+    white-space: pre;
+  }
+  
+  .container {
+    margin-top: 30px;
+    max-width: 900px;
+  }
+
   .texttitle {
-    font-size: 26px;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
   }
 
   .textsubtitle {
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
   }
 
   .textsubsubtitle {
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
   }
-  
+
   .text {
-    font-size: 16px;
+    font-size: 22px;
   }
-  
+
   .texttiny {
-    font-size: 10px;
+    font-size: 12px;
   }
-  
+
   .bold {
     font-weight: bolder;
   }
@@ -138,12 +167,24 @@ Customisation
   .italic {
     font-style: italic;
   }
-
-  .pre {
-    /* auto line breaks converting \n to <br> */
-    white-space: pre;
+  
+  /*
+  WordPress components
+  */
+  
+  .comment-form * {
+    font-size: 12px;
   }
   
+  .comment-list * {
+    font-size: 12px;
+  }
+  
+  .comment-form-comment textarea, label { 
+    /* vertical-align: top; */
+    display: block; /* make the comment: to be above text area. */
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -151,5 +192,9 @@ Customisation
   CSS for tablet and mobiles : bootstrap extra small devices desktop 
   : leave empty if same as above larger screen
   */
-  
+  .container {
+    margin-top: 10px;
+    padding: 0px 10px;
+  }
+
 }
