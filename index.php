@@ -35,12 +35,10 @@
       <!-- end top slider -->
 
       <!-- start content -->
-      <div class="col-md-12">
       <?php
         get_template_part( 'content' );
         // get the template file. same as include.
       ?>
-      </div>
       <!-- end content -->
 
       <!-- optional lowermenu content -->

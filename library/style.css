@@ -111,24 +111,24 @@ Customisation
 */
 
 @media screen {
-  /* 
+  /*
   CSS for all : bootstrap large devices desktop : default larger screen
   */
-  
+
   h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     line-height: 150%;
   }
-  
+
   p, pre, blockquote{
     font-size: 22px;
   }
-  
+
   pre {
     /* auto line breaks converting \n to <br> */
     white-space: pre;
   }
-  
+
   .container {
     margin-top: 30px;
     max-width: 900px;
@@ -167,20 +167,20 @@ Customisation
   .italic {
     font-style: italic;
   }
-  
+
   /*
   WordPress components
   */
-  
+
   .comment-form * {
     font-size: 12px;
   }
-  
+
   .comment-list * {
     font-size: 12px;
   }
-  
-  .comment-form-comment textarea, label { 
+
+  .comment-form-comment textarea, label {
     /* vertical-align: top; */
     display: block; /* make the comment: to be above text area. */
   }
@@ -188,8 +188,8 @@ Customisation
 }
 
 @media screen and (max-width: 768px) {
-  /* 
-  CSS for tablet and mobiles : bootstrap extra small devices desktop 
+  /*
+  CSS for tablet and mobiles : bootstrap extra small devices desktop
   : leave empty if same as above larger screen
   */
   .container {
