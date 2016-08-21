@@ -22,7 +22,7 @@
 <br>
 <!-- javascript at the end of the document so the pages load faster -->
 
-<script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
-<script src="//cdn.jsdelivr.net/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <?php wp_footer(); ?>
