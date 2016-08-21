@@ -1,5 +1,5 @@
-<?php 
-  if(false) : 
+<?php
+  if(false) :
   // temporary blocked sample. If you want to use this splash, just set false to true
 ?>
 <div id="carousel-generic" class="carousel slide" data-ride="carousel">

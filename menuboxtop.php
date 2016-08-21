@@ -20,7 +20,7 @@
 
   <!-- top nav collapse -->
   <div class="collapse navbar-collapse" id="bsnavbar-collapse">
-  <?php 
+  <?php
 
   $menubarpill = wp_page_menu(array(
     'depth'       => 0,
@@ -31,8 +31,8 @@
     'echo'        => false,
     'show_home'   => false,
     'link_before' => '',
-    'link_after'  => '' 
-  )); 
+    'link_after'  => ''
+  ));
 
   $menubarpill = str_replace('<ul>', '<ul class="nav navbar-nav navbar-right">', $menubarpill);
   $menubarpill = str_replace("<ul class='children'>", '<ul class="dropdown-menu">', $menubarpill);
