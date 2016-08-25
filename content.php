@@ -9,8 +9,8 @@
         <?php if (is_front_page() && is_page()): ?>
         <!-- if is set as front and is page type - so that no title appears -->
 
-        <br>
-        <br>
+        <div class="texttitle">
+        </div>
 
         <?php elseif (is_front_page()): ?>
         <!-- if is set as front - usually the list of post -->
