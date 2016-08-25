@@ -6,29 +6,33 @@
       <!-- micro header -->
       <header class="clearfix">
 
-        <?php if (is_front_page()): ?>
-        <!--Main Page Contents - usually the list of post -->
+        <?php if (is_front_page() && is_page()): ?>
+        <!-- if is set as front and is page type - so that no title appears -->
 
-        <div class="">
-          <a href="<?php echo esc_url(get_permalink());?>">
-            <div class="texttitle">
-              <?php the_title(); ?>
-            </div>
-          </a>
-          <small>
-            <i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?>
-          </small>
+        <br>
+        <br>
 
-          <br>
-          <br>
-        </div>
-
-        <?php else: ?>
-        <!--Main Posts Contents - usually the full single page/post -->
+        <?php elseif (is_front_page()): ?>
+        <!-- if is set as front - usually the list of post -->
 
         <a href="<?php echo esc_url(get_permalink());?>">
           <div class="texttitle">
-            <?php the_title(); ?>
+            <?php the_title(); ?> test
+          </div>
+        </a>
+        <small>
+          <i class="fa fa-clock-o"></i> <?php echo esc_html(get_the_date());?>
+        </small>
+
+        <br>
+        <br>
+
+        <?php else: ?>
+        <!-- else - usually the full single page/post -->
+
+        <a href="<?php echo esc_url(get_permalink());?>">
+          <div class="texttitle">
+            <?php the_title(); ?> test 2
               <br>
               <br>
           </div>
