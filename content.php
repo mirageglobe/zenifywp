@@ -17,7 +17,7 @@
 
         <a href="<?php echo esc_url(get_permalink());?>">
           <div class="texttitle">
-            <?php the_title(); ?> test
+            <?php the_title(); ?>
           </div>
         </a>
         <small>
@@ -32,7 +32,7 @@
 
         <a href="<?php echo esc_url(get_permalink());?>">
           <div class="texttitle">
-            <?php the_title(); ?> test 2
+            <?php the_title(); ?>
               <br>
               <br>
           </div>
