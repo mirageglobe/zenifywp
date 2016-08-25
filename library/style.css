@@ -121,7 +121,7 @@ Customisation
   }
 
   p, pre, blockquote{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   pre {
@@ -147,13 +147,13 @@ Customisation
   }
 
   .textsubsubtitle {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
   }
 
   .text {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .texttiny {
