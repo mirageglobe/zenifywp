@@ -12,9 +12,11 @@ if ( post_password_required() )
 ?>
 
 <div id="comments" class="comments-area">
+
   <br><hr>
-  <p class="texttitle">Comments</p>
+
   <?php if ( have_comments() ) : ?>
+  <p class="texttitle">Comments</p>
   <p class="texttiny">
   <?php
     printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'zenify' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
