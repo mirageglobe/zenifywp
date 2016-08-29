@@ -29,7 +29,15 @@ add_action( 'wp_enqueue_scripts', 'register_styles', 999 );
 /************* FIX Standard Content Layout ********************/
 
 if (!isset($content_width)) {
-  $content_width = 980;
+  $content_width = 950;
+}
+
+/************* FIX WooCommerce Compatibility ********************/
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
 }
 
 ?>

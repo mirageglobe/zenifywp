@@ -18,6 +18,7 @@ ZenifyWordpress is a part of Zenify series and is designed to make the life of d
 
 #Features
 
+- WooCommerce Compatible
 - Includes Bootstrap (via CDN)
 - Includes FontAwesome (via CDN)
 - Includes Jquery (via CDN)
@@ -46,7 +47,7 @@ This project has some primary goals and guidelines:
 - [dropped] Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
 - [done] set width of content to 420px which is max reading width - http://maxdesign.com.au/news/em/
 - [done] Activate search tool
-- Options for enabling / disabling (1) Splash, (2) MenuBoxtop/bottom
+- Using options for enabling / disabling (1) Splash, (2) MenuBoxtop/bottom
 
 
 #References
