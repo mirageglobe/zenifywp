@@ -3,8 +3,8 @@
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'thumb600', 600, 150, true );
-add_image_size( 'thumb300', 300, 100, true );
+//add_image_size( 'thumb600', 600, 150, true );
+//add_image_size( 'thumb300', 300, 100, true );
 /*
   ref: https://developer.wordpress.org/reference/functions/add_image_size/
 */
@@ -24,5 +24,12 @@ function register_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'register_styles', 999 );
+
+
+/************* FIX Standard Content Layout ********************/
+
+if (!isset($content_width)) {
+  $content_width = 980;
+}
 
 ?>
