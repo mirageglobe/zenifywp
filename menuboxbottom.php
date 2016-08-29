@@ -1,9 +1,11 @@
 <!-- This block is just above footer -->
 
-<?php if (have_posts()) : ?>
+<?php $zen_recent_posts = wp_get_archives( array( 'type' => 'postbypost', 'before' => ' ', 'after' => ' &middot;', 'limit' => '', 'echo' => 0, 'format' => 'custom' ) ); ?>
+
+<?php if ($zen_recent_posts != '') : ?>
 <br>
 <div>
   <div class="texttiny bold">Recent Posts</div>
-  <div class="texttiny"><?php wp_get_archives( array( 'type' => 'postbypost', 'before' => ' ', 'after' => ' &middot;', 'limit' => 500, 'format' => 'custom' ) ); ?></div>
+  <div class="texttiny"><?php echo $zen_recent_posts; ?></div>
 </div>
 <?php endif; ?>
