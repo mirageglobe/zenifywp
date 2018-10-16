@@ -65,7 +65,6 @@
           <i class="fa fa-user"></i> <?php echo get_the_author();?>
         </div>
         <br>
-        <hr>
         <div class="texttiny">
           <div class="pull-left">
             <?php previous_post_link( '<i class="fa fa-arrow-circle-o-left"></i> Previous: %link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'zenifywordpress' ) . '</span> %title' ); ?>

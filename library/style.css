@@ -183,6 +183,7 @@ Customisation
   .comment-form-comment textarea, label {
     /* vertical-align: top; */
     display: block; /* make the comment: to be above text area. */
+    width: 100%;
   }
 
 }
