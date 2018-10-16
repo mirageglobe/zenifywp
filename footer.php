@@ -8,7 +8,7 @@
   &middot;
   <i class="fa fa-globe"></i> using
   <a href="https://github.com/mirageglobe/zenifywordpress">zenifywordpress theme</a>
-  by <a href="http://www.dracoturtur.com">www.dracoturtur.com</a>
+  by <a href="//www.mirageglobe.com">www.mirageglobe.com</a>
   &middot;
 </div>
 
