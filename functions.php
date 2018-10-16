@@ -11,12 +11,10 @@
 
 /************* THEME SETTINGS ********************/
 
-add_action('customize_register','zenify_customize_register');
-
 function zenify_customize_register($wp_customize){
 
-    $wp_customize->add_section('themename_menu_layout', array(
-        'title'    => __('Zenify Settings', 'zenifywp'),
+    $wp_customize->add_section('zwp_menu', array(
+        'title'    => __('Zenify Settings', 'Zenify Wordpress'),
         'description' => '',
         'priority' => 120,
     ));
@@ -24,25 +22,27 @@ function zenify_customize_register($wp_customize){
     //  =============================
     //  = Text Input                =
     //  =============================
-    $wp_customize->add_setting('themename_theme_options[menu_layout]', array(
-        'default'        => 'value1',
+    $wp_customize->add_setting('zwp_theme_options_menu_layout', array(
+        'default'        => 'top',
         'capability'     => 'edit_theme_options',
         'type'           => 'option',
 
     ));
 
-    $wp_customize->add_control('themename_zenify_wp', array(
-        'label'      => __('Top Menu Layout', 'themename'),
-        'section'    => 'themename_menu_layout',
-        'settings'   => 'themename_theme_options[menu_layout]',
+    $wp_customize->add_control('zwp_zenify_wp', array(
+        'label'      => __('Top Menu Layout', 'Zenify Wordpress'),
+        'section'    => 'zwp_menu',
+        'settings'   => 'zwp_theme_options_menu_layout',
         'type'       => 'radio',
         'choices'    => array(
-            'value1' => 'Top',
-            'value2' => 'Right',
-            'value3' => 'Left',
+            'top' => 'Top',
+            'right' => 'Right',
+            'left' => 'Left',
         ),
     ));
 }
+
+add_action('customize_register','zenify_customize_register');
 
 /************* ACTIVE SIDEBARS ********************/
 
