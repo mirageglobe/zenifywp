@@ -4,11 +4,10 @@ Zenify Wordpress
 - Author: Jimmy MG Lim (mirageglobe@gmail.com)
 - Twitter: @mirageglobe
 - Blog: http://www.mirageglobe.com
-- Company: http://www.dracoturtur.com
 - Source: https://github.com/mirageglobe/zenifywordpress
 - License: Apache License 2.0
 
-ZenifyWordpress is a part of Zenify series and is designed to make the life of developers easier. It is built using HTML5 with responsive bootstrap (with bootstrap mobile first in mind). It now includes fontawesome, bootstrap, jquery by default and has a carousel which you can enable.
+ZenifyWordpress is designed to make the development of wordpress themes simplier. It is built using HTML5 with responsive bootstrap (with bootstrap mobile first in mind). It now includes fontawesome, bootstrap, jquery by default and has a carousel which can be enabled.
 
 ![Zenify Screenshot](https://raw.githubusercontent.com/mirageglobe/zenify/master/screenshot.png)
 
@@ -16,7 +15,7 @@ ZenifyWordpress is a part of Zenify series and is designed to make the life of d
 *Please check out the holder page. You can use this when you are swapping over templates. https://github.com/mirageglobe/zenifywordpressholderpage*
 
 
-#Features
+# Features
 
 - WooCommerce Compatible
 - Includes Bootstrap (via CDN)
@@ -28,12 +27,24 @@ ZenifyWordpress is a part of Zenify series and is designed to make the life of d
 - RSS Feed supported
 - Modular layout design
 
+# To use
 
-#Guidelines and Road Map
+use either method 1
+
+- checkout the repository
+- run buildzip.sh which builds a zip file of the theme which can be added to themes in wordpress
+
+method 2
+
+- download from github as source
+- compress into zip file as zenifywordpress.zip
+- upload to wordpress themes
+
+# Guidelines and Road Map
 
 This project has some primary goals and guidelines:
 
-##Guidelines
+## Guidelines
 
 - Minimal number of files (php files, settings, etc)
 - Use CDN (content delivery network) when possible to reduce hosted repos
@@ -41,20 +52,20 @@ This project has some primary goals and guidelines:
 - Follow Bootstrap guidelines
 - Simple and Clean UX/UI (rule of thumb: if something is not essential, remove it)
 
-##Roadmap
+## Roadmap
 
+- using options for enabling / disabling display author
+- using options for displaying menuboxtop/bottom/leftside
 - [done] support child themes
 - [dropped] Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
 - [done] set width of content to 420px which is max reading width - http://maxdesign.com.au/news/em/
 - [done] Activate search tool
-- Using options for enabling / disabling (1) Splash, (2) MenuBoxtop/bottom
 
-
-#References
+# References
 
 - https://codex.wordpress.org/Theme_Development#Template_File_Checklist
 
-#License
+# License
 
 Copyright 2010 Jimmy MG Lim
 
