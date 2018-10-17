@@ -7,7 +7,7 @@
   <i class="fa fa-home"></i> <?php bloginfo( 'name' ); ?>
   &middot;
   <i class="fa fa-globe"></i> using
-  <a href="https://github.com/mirageglobe/zenifywordpress">zenifywordpress theme</a>
+  <a href="https://github.com/mirageglobe/zenifywordpress">zenifywp theme</a>
   by <a href="//www.mirageglobe.com">www.mirageglobe.com</a>
   &middot;
 </div>

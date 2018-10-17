@@ -1,4 +1,20 @@
+
+<?php if(get_option('zwp_menu_layout_setting')=='top') { //if selected menu top ?>
 <div class="col-md-10 col-md-offset-1">
+<?php } //end if ?>
+<?php if(get_option('zwp_menu_layout_setting')=='left') { //if selected menu left ?>
+<div class="col-md-3">
+  <br>
+  <?php
+    get_template_part( 'menuboxside' );
+    // get the template file. same as include.
+  ?>
+</div>
+<div class="col-md-9">
+<?php } //end if ?>
+<?php if(get_option('zwp_menu_layout_setting')=='right') { //if selected menu left ?>
+<div class="col-md-9">
+<?php } //end if ?>
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <article id="post-<?php the_ID(); ?>" class="" role="article" itemscope itemtype="http://schema.org/BlogPosting">
@@ -113,3 +129,14 @@
       <?php endif; ?>
 
 </div>
+
+<?php if(get_option('zwp_menu_layout_setting')=='right') { //if selected menu right ?>
+<div class="col-md-3">
+  <br>
+  <?php
+    get_template_part( 'menuboxside' );
+    // get the template file. same as include.
+  ?>
+</div>
+<?php } //end if ?>
+

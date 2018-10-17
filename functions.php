@@ -11,37 +11,44 @@
 
 /************* THEME SETTINGS ********************/
 
-function zenify_customize_register($wp_customize){
 
-    $wp_customize->add_section('zwp_menu', array(
-        'title'    => __('Zenify Settings', 'Zenify Wordpress'),
-        'description' => '',
+function zenify_customize_register($wp_customize) {
+
+    $wp_customize->add_section('zwp_section', array(
+        'title'    => __('Zenify Settings', 'zenifywp'),
+        'capability' => 'edit_theme_options',
+        'description' => __('Allows you to edit layout','zenifywp'),
         'priority' => 120,
     ));
 
-    //  =============================
-    //  = Text Input                =
-    //  =============================
-    $wp_customize->add_setting('zwp_theme_options_menu_layout', array(
+    $wp_customize->add_setting('zwp_menu_layout_setting', array(
         'default'        => 'top',
-        'capability'     => 'edit_theme_options',
         'type'           => 'option',
-
     ));
 
-    $wp_customize->add_control('zwp_zenify_wp', array(
-        'label'      => __('Top Menu Layout', 'Zenify Wordpress'),
-        'section'    => 'zwp_menu',
-        'settings'   => 'zwp_theme_options_menu_layout',
+    $wp_customize->add_control('zwp_menu_layout_control', array(
+        'label'      => __('Menu layout', 'zenifywp'),
+        'section'    => 'zwp_section',
+        'settings'   => 'zwp_menu_layout_setting',
         'type'       => 'radio',
         'choices'    => array(
-            'top' => 'Top',
-            'right' => 'Right',
-            'left' => 'Left',
+            'top' => __('Top menu', 'zenifywp'),
+            'left' => __('Left menu', 'zenifywp'),
+            'right' => __('Right menu', 'zenifywp')
         ),
     ));
 }
 
+function zenify_settings_customizer() {
+?>
+
+<?php
+  //echo 'testmod';
+  //echo get_option('zwp_menu_layout_setting');
+  //echo 'testermod';
+}
+
+add_action('wp_head','zenify_settings_customizer');
 add_action('customize_register','zenify_customize_register');
 
 /************* ACTIVE SIDEBARS ********************/
