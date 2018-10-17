@@ -52,10 +52,14 @@ This project has some primary goals and guidelines:
 - Follow Bootstrap guidelines
 - Simple and Clean UX/UI (rule of thumb: if something is not essential, remove it)
 
+## Known bugs
+
+- default value of getopt should be top.
+
 ## Roadmap
 
 - using options for enabling / disabling display author
-- using options for displaying menuboxtop/bottom/leftside
+- [done] using options for displaying menuboxtop/bottom/leftside
 - [done] support child themes
 - [dropped] Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
 - [done] set width of content to 420px which is max reading width - http://maxdesign.com.au/news/em/
