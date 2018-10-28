@@ -39,15 +39,6 @@ function zenify_customize_register($wp_customize) {
     ));
 }
 
-function zenify_settings_customizer() {
-?>
-
-<?php
-  //echo 'testmod';
-  //echo get_option('zwp_menu_layout_setting');
-  //echo 'testermod';
-}
-
 add_action('wp_head','zenify_settings_customizer');
 add_action('customize_register','zenify_customize_register');
 
