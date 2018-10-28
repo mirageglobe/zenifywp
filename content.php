@@ -1,5 +1,4 @@
-
-<?php if(get_option('zwp_menu_layout_setting')=='top') { //if selected menu top ?>
+<?php if((get_option('zwp_menu_layout_setting')=='top')||(get_option('zwp_menu_layout_setting')=='')) { //if selected menu top ?>
 <div class="col-md-10 col-md-offset-1">
 <?php } //end if ?>
 <?php if(get_option('zwp_menu_layout_setting')=='left') { //if selected menu left ?>
