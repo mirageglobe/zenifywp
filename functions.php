@@ -21,6 +21,7 @@ function zenify_customize_register($wp_customize) {
         'priority' => 120,
     ));
 
+    // menu layout setting
     $wp_customize->add_setting('zwp_menu_layout_setting', array(
         'default'        => 'top',
         'type'           => 'option',
@@ -35,6 +36,23 @@ function zenify_customize_register($wp_customize) {
             'top' => __('Top menu', 'zenifywp'),
             'left' => __('Left menu', 'zenifywp'),
             'right' => __('Right menu', 'zenifywp')
+        ),
+    ));
+
+    // menu show author
+    $wp_customize->add_setting('zwp_menu_show_author_setting', array(
+        'default'        => 'show',
+        'type'           => 'option',
+    ));
+
+    $wp_customize->add_control('zwp_menu_show_author_control', array(
+        'label'      => __('Show author', 'zenifywp'),
+        'section'    => 'zwp_section',
+        'settings'   => 'zwp_menu_show_author_setting',
+        'type'       => 'radio',
+        'choices'    => array(
+            'show' => __('Show', 'zenifywp'),
+            'hide' => __('Hide', 'zenifywp')
         ),
     ));
 }

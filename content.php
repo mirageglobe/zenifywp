@@ -77,7 +77,9 @@
         <div class="pull-right texttiny">
           <i class="fa fa-arrow-circle-o-up"></i> <a href="#top">Top</a>
           <i class="fa fa-home"></i> <a class="" href="<?php echo home_url(); ?>">Home</a>
-          <i class="fa fa-user"></i> <?php echo get_the_author();?>
+          <?php if((get_option('zwp_menu_show_author_setting')=='show')||(get_option('zwp_menu_show_author_setting')=='')) { //if selected show or default empty ?>
+            <i class="fa fa-user"></i> <?php echo get_the_author();?>
+          <?php } //end if ?>
         </div>
         <br>
         <div class="texttiny">
