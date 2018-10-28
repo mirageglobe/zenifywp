@@ -26,6 +26,9 @@ ZenifyWordpress is designed to make the development of wordpress themes simplier
 - Preset gallery layout supported
 - RSS Feed supported
 - Modular layout design
+- New theme compliant customisation via Appearance > Customize > Zenify Settings
+- Options to show one of three menu layouts (left/right/top)
+- Options to show/hide author name
 
 # To use
 
@@ -58,12 +61,12 @@ This project has some primary goals and guidelines:
 
 ## Roadmap
 
-- using options for enabling / disabling display author
+- [done] using options for enabling / disabling display author
 - [done] using options for displaying menuboxtop/bottom/leftside
 - [done] support child themes
-- [dropped] Include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
+- [dropped] include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
 - [done] set width of content to 420px which is max reading width - http://maxdesign.com.au/news/em/
-- [done] Activate search tool
+- [done] activate search tool
 
 # References
 
