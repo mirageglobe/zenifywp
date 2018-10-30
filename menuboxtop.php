@@ -19,7 +19,7 @@
   </div>
 
   <!-- top nav collapse -->
-  <?php if(get_option('zwp_menu_layout_setting')=='top') { //if selected menu top ?>
+  <?php if((get_option('zwp_menu_layout_setting')=='top')||(get_option('zwp_menu_layout_setting')=='')) { //if selected menu top ?>
   <div class="collapse navbar-collapse" id="bsnavbar-collapse">
   <?php
 
