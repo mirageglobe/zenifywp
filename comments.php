@@ -19,7 +19,7 @@ if ( post_password_required() )
   <p class="texttitle">Comments</p>
   <p class="texttiny">
   <?php
-    printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'zenify' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
+    printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'zenifywp' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
   </p>
 
   <ol class="comment-list texttiny">
@@ -39,18 +39,18 @@ if ( post_password_required() )
 
   <nav class="navigation comment-navigation" role="navigation">
     <p class="screen-reader-text section-heading texttiny">
-      <?php _e( 'Comment navigation', 'twentythirteen' ); ?>
+      <?php _e( 'Comment navigation', 'zenifywp' ); ?>
     </p>
 
-    <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'zenify' ) ); ?></div>
-    <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'zenify' ) ); ?></div>
+    <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'zenifywp' ) ); ?></div>
+    <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'zenifywp' ) ); ?></div>
   </nav><!-- .comment-navigation -->
 
   <?php endif; // Check for comment navigation ?>
 
   <?php if ( ! comments_open() && get_comments_number() ) : ?>
     <br>
-    <p class="texttiny no-comments"><?php _e( 'Comments are closed.' , 'zenify' ); ?></p>
+    <p class="texttiny no-comments"><?php _e( 'Comments are closed.' , 'zenifywp' ); ?></p>
   <?php endif; ?>
 
 <?php endif; // have_comments() ?>

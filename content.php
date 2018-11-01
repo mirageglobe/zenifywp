@@ -82,12 +82,16 @@
           <?php } //end if ?>
         </div>
         <br>
+        <div class="pull-right texttiny">
+          <?php the_tags() ?>
+        </div>
+        <br>
         <div class="texttiny">
           <div class="pull-left">
-            <?php previous_post_link( '<i class="fa fa-arrow-circle-o-left"></i> Previous: %link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'zenifywordpress' ) . '</span> %title' ); ?>
+            <?php previous_post_link( '<i class="fa fa-arrow-circle-o-left"></i> Previous: %link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'zenifywp' ) . '</span> %title' ); ?>
           </div>
           <div class="pull-right">
-            <?php next_post_link( '<i class="fa fa-arrow-circle-o-right"></i> Next: %link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'zenifywordpress' ) . '</span>' ); ?>
+            <?php next_post_link( '<i class="fa fa-arrow-circle-o-right"></i> Next: %link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'zenifywp' ) . '</span>' ); ?>
           </div>
         </div>
 

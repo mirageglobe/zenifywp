@@ -9,8 +9,21 @@
   ref: https://developer.wordpress.org/reference/functions/add_image_size/
 */
 
-/************* THEME SETTINGS ********************/
 
+/************* WP MANAGED TITLE ********************/
+
+add_action( 'after_setup_theme', 'wpse_theme_setup' );
+function wpse_theme_setup() {
+    /*
+     * Let WordPress manage the document title.
+     * By adding theme support, we declare that this theme does not use a
+     * hard-coded <title> tag in the document head, and expect WordPress to
+     * provide it for us.
+     */
+    add_theme_support( 'title-tag' );
+}
+
+/************* THEME SETTINGS ********************/
 
 function zenify_customize_register($wp_customize) {
 

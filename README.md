@@ -1,18 +1,17 @@
-Zenify Wordpress
+ZenifyWP
 ================================================
 
 - Author: Jimmy MG Lim (mirageglobe@gmail.com)
 - Twitter: @mirageglobe
 - Blog: http://www.mirageglobe.com
-- Source: https://github.com/mirageglobe/zenifywordpress
+- Source: https://github.com/mirageglobe/zenifywp
 - License: Apache License 2.0
 
-ZenifyWordpress is designed to make the development of wordpress themes simplier. It is built using HTML5 with responsive bootstrap (with bootstrap mobile first in mind). It now includes fontawesome, bootstrap, jquery by default and has a carousel which can be enabled.
+ZenifyWP is designed to make the development of wordpress themes simplier. It is built using HTML5 with responsive bootstrap (with bootstrap mobile first in mind). It now includes fontawesome, bootstrap, jquery by default and has a carousel which can be enabled.
 
 ![Zenify Screenshot](https://raw.githubusercontent.com/mirageglobe/zenify/master/screenshot.png)
 
 *Inspired/Forked from Bones (Eddie Machado http://themble.com/bones) and Zenhabits*
-*Please check out the holder page. You can use this when you are swapping over templates. https://github.com/mirageglobe/zenifywordpressholderpage*
 
 
 # Features
@@ -40,7 +39,7 @@ use either method 1
 method 2
 
 - download from github as source
-- compress into zip file as zenifywordpress.zip
+- compress into zip file as zenifywp.zip
 - upload to wordpress themes
 
 # Guidelines and Road Map
