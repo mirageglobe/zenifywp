@@ -12,8 +12,8 @@
 
 /************* WP MANAGED TITLE ********************/
 
-add_action( 'after_setup_theme', 'wpse_theme_setup' );
-function wpse_theme_setup() {
+add_action( 'after_setup_theme', 'zenifywp_theme_setup' );
+function zenifywp_theme_setup() {
     /*
      * Let WordPress manage the document title.
      * By adding theme support, we declare that this theme does not use a
@@ -27,6 +27,20 @@ function wpse_theme_setup() {
 
 function zenify_customize_register($wp_customize) {
 
+    //ref https://divpusher.com/blog/wordpress-customizer-sanitization-examples
+    //radio box sanitization function
+    function zenifywp_sanitize_radio( $input, $setting ){
+
+        //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+        $input = sanitize_key($input);
+
+        //get the list of possible radio box options 
+        $choices = $setting->manager->get_control( $setting->id )->choices;
+
+        //return input if valid or return default option
+        return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+    }
+
     $wp_customize->add_section('zwp_section', array(
         'title'    => __('Zenify Settings', 'zenifywp'),
         'capability' => 'edit_theme_options',
@@ -38,6 +52,7 @@ function zenify_customize_register($wp_customize) {
     $wp_customize->add_setting('zwp_menu_layout_setting', array(
         'default'        => 'top',
         'type'           => 'option',
+        'sanitize_callback' => 'zenifywp_sanitize_radio',
     ));
 
     $wp_customize->add_control('zwp_menu_layout_control', array(
@@ -56,6 +71,7 @@ function zenify_customize_register($wp_customize) {
     $wp_customize->add_setting('zwp_menu_show_author_setting', array(
         'default'        => 'show',
         'type'           => 'option',
+        'sanitize_callback' => 'zenifywp_sanitize_radio',
     ));
 
     $wp_customize->add_control('zwp_menu_show_author_control', array(
@@ -72,6 +88,21 @@ function zenify_customize_register($wp_customize) {
 
 add_action('wp_head','zenify_settings_customizer');
 add_action('customize_register','zenify_customize_register');
+
+/************* WP WIDGET SIDEBARS ********************/
+
+add_action( 'widgets_init', 'zenifywp_widgets_init' );
+function theme_slug_widgets_init() {
+    register_sidebar( array(
+        'name' => __( 'Main Sidebar', 'zenifywp' ),
+        'id' => 'sidebar-1',
+        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'zenifywp' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+	'after_widget'  => '</li>',
+	'before_title'  => '<h2 class="widgettitle">',
+	'after_title'   => '</h2>',
+    ) );
+}
 
 /************* ACTIVE SIDEBARS ********************/
 

@@ -20,3 +20,6 @@
   echo $menubarpill;
   ?>
 </div>
+<div>
+  <?php register_sidebar( $args ); ?>
+</div>
