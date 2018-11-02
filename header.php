@@ -30,5 +30,8 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/style.css">
 
+<!-- enqueue required by 2.7 update -->
+<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+
 <!-- default wordpress head -->
 <?php wp_head(); ?>

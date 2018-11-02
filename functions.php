@@ -120,6 +120,10 @@ function register_styles() {
 
 add_action( 'wp_enqueue_scripts', 'register_styles', 999 );
 
+/************* RSS FEEDLINKS ********************/
+
+// ref http://ottopress.com/2010/wordpress-3-0-theme-tip-feed-links/
+add_theme_support( 'automatic-feed-links' );
 
 /************* FIX Standard Content Layout ********************/
 

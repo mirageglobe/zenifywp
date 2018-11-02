@@ -16,7 +16,7 @@
 <?php } //end if ?>
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  <article id="post-<?php the_ID(); ?>" class="" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
       <!-- micro header -->
       <header class="clearfix">
@@ -84,6 +84,15 @@
         <br>
         <div class="pull-right texttiny">
           <?php the_tags() ?>
+        </div>
+        <br>
+        <div class="pull-right texttiny">
+          <?php wp_link_pages( array(
+            'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'zenifywp' ) . '</span>',
+            'after'       => '</div>',
+            'link_before' => '<span>',
+            'link_after'  => '</span>',
+          ) ); ?>
         </div>
         <br>
         <div class="texttiny">
