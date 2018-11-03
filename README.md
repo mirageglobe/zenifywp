@@ -56,6 +56,7 @@ This project has some primary goals and guidelines:
 
 ## Roadmap / Bugs
 
+- share social media snippet code at end of page
 - [fixed] default value of getopt should be top
 - [done] using options for enabling / disabling display author
 - [done] using options for displaying menuboxtop/bottom/leftside
