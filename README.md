@@ -3,7 +3,7 @@ ZenifyWP
 
 - Author: Jimmy MG Lim (mirageglobe@gmail.com)
 - Twitter: @mirageglobe
-- Blog: http://www.mirageglobe.com
+- Blog: www.mirageglobe.com
 - Source: https://github.com/mirageglobe/zenifywp
 - License: Apache License 2.0
 
@@ -42,7 +42,7 @@ method 2
 - compress into zip file as zenifywp.zip
 - upload to wordpress themes
 
-# Guidelines and Road Map
+# Guidelines and Roadmap
 
 This project has some primary goals and guidelines:
 
@@ -54,12 +54,9 @@ This project has some primary goals and guidelines:
 - Follow Bootstrap guidelines
 - Simple and Clean UX/UI (rule of thumb: if something is not essential, remove it)
 
-## Known bugs
+## Roadmap / Bugs
 
-- default value of getopt should be top.
-
-## Roadmap
-
+- [fixed] default value of getopt should be top
 - [done] using options for enabling / disabling display author
 - [done] using options for displaying menuboxtop/bottom/leftside
 - [done] support child themes

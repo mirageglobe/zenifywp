@@ -186,6 +186,10 @@ Customisation
     width: 100%;
   }
 
+  .akismet_comment_form_privacy_notice {
+    font-size: 12px;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
