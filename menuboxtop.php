@@ -23,7 +23,7 @@
   <div class="collapse navbar-collapse" id="bsnavbar-collapse">
   <?php
 
-  $menubarpill = wp_page_menu(array(
+  $menubarpill = wp_nav_menu(array(
     'depth'       => 0,
     'sort_column' => 'menu_order, post_title',
     'menu_class'  => 'menu',

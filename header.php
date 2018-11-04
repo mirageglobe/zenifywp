@@ -28,7 +28,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/style.css">
 
 <!-- enqueue required by 2.7 update -->
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>

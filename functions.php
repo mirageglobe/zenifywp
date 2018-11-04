@@ -9,6 +9,13 @@
   ref: https://developer.wordpress.org/reference/functions/add_image_size/
 */
 
+/************* WP CUSTOM TINY MCE EDITOR ********************/
+
+function zenifywp_add_editor_styles() {
+    add_editor_style( 'library/custom-style.css' );
+}
+add_action( 'admin_init', 'zenifywp_add_editor_styles' );
+
 /************* WP THUMBNAILS ********************/
 
 add_theme_support( 'post-thumbnails' );
@@ -114,10 +121,10 @@ function register_styles() {
 
   if (!is_admin()) {
     // register main stylesheet
-    wp_register_style( 'zen-stylesheet', get_stylesheet_directory_uri() . '/library/style.css', array(), '', 'all' );
+    wp_register_style( 'zenifywp-stylesheet', get_stylesheet_directory_uri() . '/library/custom-style.css', array(), '', 'all' );
 
     // enqueue styles and scripts
-    wp_enqueue_style( 'zen-stylesheet' );
+    wp_enqueue_style( 'zenifywp-stylesheet' );
   }
 
 }
