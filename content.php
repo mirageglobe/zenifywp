@@ -61,6 +61,13 @@
       <?php if(is_singular()): ?>
       <section class="clearfix" itemprop="articleBody">
         <div class="text">
+            <?php
+            // check if the post has a Post Thumbnail assigned to it. and set it as the image default for the post
+            if ( has_post_thumbnail() ) {
+              the_post_thumbnail('full');
+              echo '<br>';
+            }
+            ?>
             <!-- is singular displays posts or pages and is single displays just posts -->
             <?php the_content(); ?>
         </div>

@@ -9,6 +9,10 @@
   ref: https://developer.wordpress.org/reference/functions/add_image_size/
 */
 
+/************* WP THUMBNAILS ********************/
+
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 50, 50 );
 
 /************* WP MANAGED TITLE ********************/
 
