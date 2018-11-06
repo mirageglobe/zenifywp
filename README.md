@@ -1,11 +1,8 @@
 ZenifyWP
 ================================================
 
-- Author: Jimmy MG Lim (mirageglobe@gmail.com)
-- Twitter: @mirageglobe
-- Blog: www.mirageglobe.com
+- Author/site: Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
 - Source: https://github.com/mirageglobe/zenifywp
-- License: Apache License 2.0
 
 ZenifyWP is designed to make the development of wordpress themes simplier. It is built using HTML5 with responsive bootstrap (with bootstrap mobile first in mind). It now includes fontawesome, bootstrap, jquery by default and has a carousel which can be enabled.
 
@@ -42,11 +39,7 @@ method 2
 - compress into zip file as zenifywp.zip
 - upload to wordpress themes
 
-# Guidelines and Roadmap
-
-This project has some primary goals and guidelines:
-
-## Guidelines
+# Guidelines
 
 - Minimal number of files (php files, settings, etc)
 - Use CDN (content delivery network) when possible to reduce hosted repos
@@ -54,7 +47,7 @@ This project has some primary goals and guidelines:
 - Follow Bootstrap guidelines
 - Simple and Clean UX/UI (rule of thumb: if something is not essential, remove it)
 
-## Roadmap / Bugs
+# Roadmap / Bugs
 
 - share social media snippet code at end of page
 - [done] default value of getopt should be top
