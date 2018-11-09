@@ -5,7 +5,7 @@
 <?php if ($zen_recent_posts != '') : ?>
 <br>
 <div>
-  <div class="texttiny bold">Recent Posts</div>
+  <div class="texttiny bold">Other Posts</div>
   <div class="texttiny"><?php echo $zen_recent_posts; ?></div>
 </div>
 <?php endif; ?>
