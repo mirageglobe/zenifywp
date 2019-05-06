@@ -1,34 +1,33 @@
-ZenifyWP
-================================================
 
-- Author/site: Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
-- Source: https://github.com/mirageglobe/zenifywp
+# zenifywp
 
-ZenifyWP is designed to make the development of wordpress themes simplier. It is built using HTML5 with responsive bootstrap (with bootstrap mobile first in mind). It now includes fontawesome, bootstrap, jquery by default and has a carousel which can be enabled.
+- maintainer : Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
+- source : https://github.com/mirageglobe/zenifywp
+
+zenifywp is designed to make the development of wordpress themes simplier. it is built using html5 with responsive bootstrap (with bootstrap mobile first in mind). it now includes fontawesome, bootstrap, jquery by default and has a carousel which can be enabled.
 
 ![Zenify Screenshot](https://raw.githubusercontent.com/mirageglobe/zenify/master/screenshot.png)
 
-*Inspired/Forked from Bones (Eddie Machado http://themble.com/bones) and Zenhabits*
+*inspired/forked from bones (eddie machado http://themble.com/bones) and zenhabits*
 
+# features
 
-# Features
+- woocommerce compatible
+- includes bootstrap (via cdn)
+- includes fontawesome (via cdn)
+- includes jquery (via cdn)
+- includes top fonts (source sans pro, opensans, lato)
+- mobile first responsive
+- preset gallery layout supported
+- rss feed supported
+- modular layout design
+- new theme compliant customisation via appearance > customize > zenify settings
+- options to show one of three menu layouts (left/right/top)
+- options to show/hide author name
 
-- WooCommerce Compatible
-- Includes Bootstrap (via CDN)
-- Includes FontAwesome (via CDN)
-- Includes Jquery (via CDN)
-- Includes top fonts (Source Sans Pro, OpenSans, Lato)
-- Mobile first responsive
-- Preset gallery layout supported
-- RSS Feed supported
-- Modular layout design
-- New theme compliant customisation via Appearance > Customize > Zenify Settings
-- Options to show one of three menu layouts (left/right/top)
-- Options to show/hide author name
+# to use
 
-# To use
-
-use either method 1
+method 1
 
 - checkout the repository
 - run buildzip.sh which builds a zip file of the theme which can be added to themes in wordpress
@@ -39,43 +38,26 @@ method 2
 - compress into zip file as zenifywp.zip
 - upload to wordpress themes
 
-# Guidelines
+# guidelines
 
-- Minimal number of files (php files, settings, etc)
-- Use CDN (content delivery network) when possible to reduce hosted repos
-- Mobile responsive enabling
-- Follow Bootstrap guidelines
-- Simple and Clean UX/UI (rule of thumb: if something is not essential, remove it)
+- minimal number of files (php files, settings, etc)
+- use cdn (content delivery network) when possible to reduce hosted repos
+- mobile responsive enabling
+- follow bootstrap guidelines
+- simple and clean ux/ui (rule of thumb: if something is not essential, remove it)
 
-# Roadmap / Bugs
+# roadmap / bugs
 
 - share social media snippet code at end of page
 - [done] default value of getopt should be top
 - [done] using options for enabling / disabling display author
 - [done] using options for displaying menuboxtop/bottom/leftside
 - [done] support child themes
-- [done] include postthumbnail. https://codex.wordpress.org/Function_Reference/get_the_post_thumbnail
+- [done] include postthumbnail. https://codex.wordpress.org/function_reference/get_the_post_thumbnail
 - [done] set width of content to 420px which is max reading width - http://maxdesign.com.au/news/em/
 - [done] activate search tool
 
-# References
+# references
 
-- https://codex.wordpress.org/Theme_Development#Template_File_Checklist
+- https://codex.wordpress.org/theme_development#template_file_checklist
 
-# License
-
-Copyright 2010 Jimmy MG Lim (mirageglobe@gmail.com)
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-License Breakdown: https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)
