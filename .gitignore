@@ -1,25 +1,18 @@
-# folders and files to be ignored by git
 
-############
-## Custom
-############
+# custom
 
 *.zip
 reference/
 *.swp
 
-############
-## OSes
-############
+# oses
 
 [Tt]humbs.db
 [Dd]esktop.ini
 *.DS_store
 .DS_store?
 
-############
-## Misc
-############
+# misc
 
 bin/
 tmp/
